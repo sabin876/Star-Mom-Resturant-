@@ -152,7 +152,8 @@ function App() {
         animate="visible"
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <motion.div
+          <motion.a
+            href="/"
             className="nav-logo"
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -163,7 +164,7 @@ function App() {
               <span style={{ fontFamily: 'var(--font-serif)', letterSpacing: '1px', fontSize: '24px', fontWeight: '700' }}>STAR MOMO</span>
               <span style={{ fontFamily: 'var(--font-serif)', fontSize: '16px', color: 'var(--primary)', letterSpacing: '0.5px', direction: 'rtl' }}>مطعم ستار مامز هاوس</span>
             </div>
-          </motion.div>
+          </motion.a>
 
           {/* Desktop Links */}
           <motion.ul className="nav-links desktop-only" variants={staggerLinks} initial="hidden" animate="visible">

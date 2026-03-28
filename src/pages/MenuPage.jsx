@@ -287,7 +287,7 @@ const MenuPage = () => {
           margin-left: auto;
           margin-right: auto;
           position: sticky;
-          top: 80px;
+          top: 70px;
           z-index: 100;
           background: rgba(250, 247, 242, 0.9);
           backdrop-filter: blur(10px);
@@ -363,7 +363,7 @@ const MenuPage = () => {
 
         @media (max-width: 768px) {
           .menu-categories {
-            top: 60px;
+            top: 70px;
             gap: 8px;
             padding: 15px 0;
           }
