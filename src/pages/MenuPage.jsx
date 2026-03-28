@@ -197,10 +197,10 @@ const MenuPage = () => {
             <span style={{ color: 'var(--secondary)', letterSpacing: '3px', textTransform: 'uppercase', fontSize: '13px', fontWeight: '600' }}>
               Culinary Journey
             </span>
-            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(40px, 8vw, 80px)', fontWeight: '400', margin: '15px 0 20px' }}>
+            <h1 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(40px, 8vw, 80px)', fontWeight: '400', margin: '15px 0 20px', color: 'white' }}>
               Our Signature Menu
             </h1>
-            <p style={{ maxWidth: '600px', margin: '0 auto', color: 'rgba(255,255,255,0.7)', fontSize: '18px', lineHeight: '1.6' }}>
+            <p style={{ maxWidth: '600px', margin: '0 auto', color: 'rgba(255,255,255,0.9)', fontSize: '18px', lineHeight: '1.6' }}>
               Explore the rich and authentic flavors of the Himalayas, handcrafted to perfection.
             </p>
           </motion.div>
@@ -227,12 +227,13 @@ const MenuPage = () => {
         </motion.div>
 
         {/* Menu Grid */}
-        <div style={{ minHeight: '600px', backgroundColor: '#fff', borderRadius: '30px', padding: '60px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)' }}>
+        <div className="menu-page-grid-container" style={{ minHeight: '600px', backgroundColor: '#fff', borderRadius: '30px', padding: '60px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', marginBottom: '50px', textAlign: 'center', color: '#1A2E1A' }}>
             {activeData.category}
           </h2>
           <AnimatePresence mode="wait">
             <motion.div 
+              className="menu-page-grid"
               key={activeCategory}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -240,7 +241,7 @@ const MenuPage = () => {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               style={{ 
                 display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(420px, 1fr))', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
                 gap: '20px 60px',
               }}
             >
@@ -364,17 +365,26 @@ const MenuPage = () => {
         @media (max-width: 768px) {
           .menu-categories {
             top: 70px;
-            gap: 8px;
-            padding: 15px 0;
+            gap: 10px;
+            padding: 15px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+          }
+          .menu-categories::-webkit-scrollbar {
+            display: none;
           }
           .category-btn {
+            flex-shrink: 0;
             padding: 8px 18px;
             font-size: 14px;
           }
-          .menu-page > div > div:last-child {
+          .menu-page-grid-container {
             padding: 30px 20px !important;
           }
-          .menu-page > div > div:last-child > div {
+          .menu-page-grid {
             grid-template-columns: 1fr !important;
             gap: 15px !important;
           }
