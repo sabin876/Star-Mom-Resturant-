@@ -8,20 +8,16 @@ const menuBookEase = [0.22, 1, 0.36, 1];
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
 
-// Vercel fix: load menu images via Vite asset imports (not hardcoded `/src/assets/...` URLs).
-const menuImages = Object.entries(
-  import.meta.glob('/src/assets/menu *.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}', {
-    eager: true,
-    import: 'default',
-  }),
-)
-  .sort(([pathA], [pathB]) => {
-    const numA = Number((pathA.match(/menu\s*(\d+)/i) || [])[1] || 0);
-    const numB = Number((pathB.match(/menu\s*(\d+)/i) || [])[1] || 0);
-    return numA - numB;
-  })
-  .slice(0, 8)
-  .map(([, image]) => image);
+import menu1 from '../assets/menu 1.png';
+import menu2 from '../assets/menu 2.png';
+import menu3 from '../assets/menu 3.png';
+import menu4 from '../assets/menu 4.png';
+import menu5 from '../assets/menu 5.png';
+import menu6 from '../assets/menu 6.png';
+import menu7 from '../assets/menu 7.png';
+import menu8 from '../assets/menu 8.png';
+
+const menuImages = [menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8];
 
 const MenuBook = () => {
   const bookRef = useRef();
@@ -118,7 +114,7 @@ const MenuBook = () => {
             height={bookSize.height}
             size="fixed"
             mode={isPortrait ? "portrait" : "landscape"}
-            showCover={isPortrait}
+            showCover={true}
             usePortrait={isPortrait}
             flippingTime={1000}
             useMouseEvents={true}
