@@ -37,7 +37,7 @@ const itemVariants = {
 
 const address = 'Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.';
 const phone = '+971 4 331 2767';
-const whatsapp = '+971 50 000 000';
+const whatsapp = '+971 55 105 3445';
 const mapLink = 'https://maps.app.goo.gl/pGnZDFpJLvWLcFVu5';
 
 // Particle component for enhanced background animation

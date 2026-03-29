@@ -16,8 +16,14 @@ import menu5 from '../assets/menu 5.png';
 import menu6 from '../assets/menu 6.png';
 import menu7 from '../assets/menu 7.png';
 import menu8 from '../assets/menu 8.png';
+import menu9 from '../assets/menu 9.png';
+import menu10 from '../assets/menu 10.png';
+import menu11 from '../assets/menu 11.png';
+import menu12 from '../assets/menu 12.png';
+import menu13 from '../assets/menu 13.png';
+import menu14 from '../assets/menu 14.png';
 
-const menuImages = [menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8];
+const menuImages = [menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu9, menu10, menu11, menu12, menu13, menu14];
 
 const MenuBook = () => {
   const bookRef = useRef();

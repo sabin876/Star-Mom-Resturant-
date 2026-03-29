@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Utensils } from 'lucide-react';
+import { Utensils, MessageCircle } from 'lucide-react';
 
 // Local assets mapping
 const assetModules = import.meta.glob('/src/assets/menu *.png', {
@@ -19,144 +19,144 @@ const menuData = [
   {
     category: 'Breakfast',
     items: [
-      { name: 'Roti / Chapati', price: 'AED 2', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Roll (Per Pcs)', price: 'AED 6', img: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Plain Omlette (Small)', price: 'AED 3', img: 'https://images.unsplash.com/photo-1664972579043-34e8e1a8e2cb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Plain Omlette (Large)', price: 'AED 6', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Masala Omlette (Small)', price: 'AED 4', img: 'https://images.unsplash.com/photo-1510693051759-dd32e4d08b33?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Masala Omlette (Large)', price: 'AED 7', img: 'https://images.unsplash.com/photo-1574484042894-cbfffeb876b0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Paratha (Plain)', price: 'AED 2', img: 'https://images.unsplash.com/photo-1628198759556-91e0aedac7b6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Paratha (Aloo)', price: 'AED 7', img: 'https://images.unsplash.com/photo-1562943187-db13e52ad693?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Roll Paratha (Per Pcs)', price: 'AED 7', img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Bhurji (Small)', price: 'AED 4', img: 'https://images.unsplash.com/photo-1606555138096-ed754ecfd0f5?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Bhurji (Large)', price: 'AED 7', img: 'https://images.unsplash.com/photo-1601633512217-1f4a9b6468a3?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Poach (Small)', price: 'AED 3', img: 'https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Poach (Large)', price: 'AED 6', img: 'https://images.unsplash.com/photo-1504113888839-1c8eb50233d3?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Selroti Set (2 pcs. Roti And Tarkari)', price: 'AED 10', img: 'https://images.unsplash.com/photo-1604908176214-411a54f15d96?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Roti / Chapati', price: '2 Dhs.', img: 'https://images.unsplash.com/photo-1534422298391-e2f993d8d5df?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Roll (Per Pcs)', price: '6 Dhs.', img: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Plain Omlette (Small)', price: '3 Dhs.', img: 'https://images.unsplash.com/photo-1664972579043-34e8e1a8e2cb?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Plain Omlette (Large)', price: '6 Dhs.', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Masala Omlette (Small)', price: '4 Dhs.', img: 'https://images.unsplash.com/photo-1510693051759-dd32e4d08b33?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Masala Omlette (Large)', price: '7 Dhs.', img: 'https://images.unsplash.com/photo-1574484042894-cbfffeb876b0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Paratha (Plain)', price: '2 Dhs.', img: 'https://images.unsplash.com/photo-1628198759556-91e0aedac7b6?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Paratha (Aloo)', price: '7 Dhs.', img: 'https://images.unsplash.com/photo-1562943187-db13e52ad693?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Roll Paratha (Per Pcs)', price: '7 Dhs.', img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Bhurji (Small)', price: '4 Dhs.', img: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Bhurji (Large)', price: '7 Dhs.', img: 'https://images.unsplash.com/photo-1626804475297-41609ea064eb?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Poach (Small)', price: '3 Dhs.', img: 'https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Poach (Large)', price: '6 Dhs.', img: 'https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Selroti Set (2 pcs. Roti And Tarkari)', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1627492221669-e362e4fbc875?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Taas Set',
     items: [
-      { name: 'Chicken Taas Set', price: 'AED 24', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mutton Taas Set', price: 'AED 27', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Taas Set', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Mutton Taas Set', price: '27 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Chewra Set',
     items: [
-      { name: 'Chewra Veg. Set', price: 'AED 14', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Chicken Set', price: 'AED 16', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Buff Set', price: 'AED 18', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Mutton Curry Set', price: 'AED 18', img: 'https://images.unsplash.com/photo-1574484042894-cbfffeb876b0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Pakku Set', price: 'AED 22', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Bhutan Set', price: 'AED 18', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Veg. Set', price: '14 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Chicken Set', price: '16 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Buff Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Mutton Curry Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Pakku Set', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Bhutan Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Khaja Set',
     items: [
-      { name: 'Khaja Set Mushroom / Paneer Chilli', price: 'AED 20', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Chicken', price: 'AED 22', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: 'AED 25', img: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Bhuttan', price: 'AED 23', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Pakku', price: 'AED 25', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Star Momo Special Khaja Set with Pakku', price: 'AED 29', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Chicken', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Sekuwa Set',
     items: [
-      { name: 'Sekuwa Set Chicken', price: 'AED 22', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Sekuwa Set Mutton', price: 'AED 25', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Sekuwa Set Chicken', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Sekuwa Set Mutton', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Special Khata',
     items: [
-      { name: 'Veg.', price: 'AED 26', img: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken', price: 'AED 28', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Buff', price: 'AED 29', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Veg.', price: '26 Dhs.', img: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken', price: '28 Dhs.', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Buff', price: '29 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Thakali Set',
     items: [
-      { name: 'Thakali Veg.', price: 'AED 20', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Mushroom', price: 'AED 23', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: 'AED 22', img: 'https://images.unsplash.com/photo-1574484042894-cbfffeb876b0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Local Chicken Curry', price: 'AED 25', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Buff Sukuti Fry', price: 'AED 25', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Mutton Curry', price: 'AED 25', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Bhutan (Mutton)', price: 'AED 24', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Mutton Pakku', price: 'AED 29', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Veg.', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Mushroom', price: '23 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Local Chicken Curry', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Buff Sukuti Fry', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Mutton Curry', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Bhutan (Mutton)', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Mutton Pakku', price: '29 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Dhido Set',
     items: [
-      { name: 'Thakali Dhido w/ Veg.', price: 'AED 22', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mushroom', price: 'AED 24', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: 'AED 26', img: 'https://images.unsplash.com/photo-1574484042894-cbfffeb876b0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Local Chicken Curry', price: 'AED 28', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mutton Curry', price: 'AED 30', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mutton Pakku', price: 'AED 30', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Star Momo Special',
     items: [
-      { name: 'Laphing (Tibetan) - Dry', price: 'AED 15', img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Laphing (Tibetan) - Jhol', price: 'AED 17', img: 'https://images.unsplash.com/photo-1541014741259-de529411b96a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Spicy Platter', price: 'AED 30', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Star Momo Platter', price: 'AED 25', img: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Wings Platter', price: 'AED 17', img: 'https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Laphing (Tibetan) - Dry', price: '15 Dhs.', img: 'https://images.unsplash.com/photo-1541014741259-de529411b96a?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Laphing (Tibetan) - Jhol', price: '17 Dhs.', img: 'https://images.unsplash.com/photo-1541014741259-de529411b96a?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Spicy Platter', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Star Momo Platter', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Wings Platter', price: '17 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Indian Cuisine',
     items: [
-      { name: 'Butter Chicken', price: 'AED 19', img: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae39f?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Kadai', price: 'AED 19', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Masala', price: 'AED 19', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Manchurian', price: 'AED 20', img: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Roast', price: 'AED 20', img: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mutton Kadai', price: 'AED 24', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Butter Chicken', price: '19 Dhs.', img: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae39f?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Kadai', price: '19 Dhs.', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Masala', price: '19 Dhs.', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Manchurian', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Roast', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Mutton Kadai', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Biryani / Fried Rice',
     items: [
-      { name: 'Veg. Biryani', price: 'AED 15', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Biryani', price: 'AED 15', img: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mutton Biryani', price: 'AED 20', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Veg. Fried Rice', price: 'AED 15', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Egg Fried Rice', price: 'AED 17', img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken Fried Rice', price: 'AED 17', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Buff', price: 'AED 20', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Mixed', price: 'AED 20', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Schezwan (Chicken)', price: 'AED 20', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Schezwan (Buff)', price: 'AED 20', img: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Schezwan (Veg.)', price: 'AED 20', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Plain Rice', price: 'AED 5', img: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Jeera Rice', price: 'AED 10', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Ghee Rice', price: 'AED 10', img: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Triple Schezwan Fried Rice', price: 'AED 25', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Veg. Biryani', price: '15 Dhs.', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Biryani', price: '15 Dhs.', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Mutton Biryani', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Veg. Fried Rice', price: '15 Dhs.', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Egg Fried Rice', price: '17 Dhs.', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Fried Rice', price: '17 Dhs.', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fried Rice - Buff', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fried Rice - Mixed', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fried Rice - Schezwan (Chicken)', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fried Rice - Schezwan (Buff)', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fried Rice - Schezwan (Veg.)', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Plain Rice', price: '5 Dhs.', img: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Jeera Rice', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Ghee Rice', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1516684732162-798a0062be99?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Triple Schezwan Fried Rice', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=800&auto=format&fit=crop' },
     ],
   },
   {
     category: 'Drinks',
     items: [
-      { name: 'Water (Small)', price: 'AED 1', img: 'https://images.unsplash.com/photo-1548839140-29a749e1be41?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Water (Large)', price: 'AED 2', img: 'https://images.unsplash.com/photo-1550505095-81378a675f92?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Soft Drinks', price: 'AED 0', img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Tea (Black)', price: 'AED 0', img: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Tea (Milk)', price: 'AED 0', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Green Tea', price: 'AED 0', img: 'https://images.unsplash.com/photo-1627492221669-e362e4fbc875?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fresh Milk Tea', price: 'AED 0', img: 'https://images.unsplash.com/photo-1563914092490-b184a4ecfbeb?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Coffee (Black)', price: 'AED 0', img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Coffee (Milk)', price: 'AED 0', img: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Hot Lemon w/ Honey', price: 'AED 10', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Water (Small)', price: '1 Dhs.', img: 'https://images.unsplash.com/photo-1548839140-29a749e1be41?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Water (Large)', price: '2 Dhs.', img: 'https://images.unsplash.com/photo-1550505095-81378a675f92?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Soft Drinks', price: '3 Dhs.', img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Tea (Black)', price: '1 Dhs.', img: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Tea (Milk)', price: '2 Dhs.', img: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Green Tea', price: '2 Dhs.', img: 'https://images.unsplash.com/photo-1627492221669-e362e4fbc875?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Fresh Milk Tea', price: '3 Dhs.', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Coffee (Black)', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Coffee (Milk)', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Hot Lemon w/ Honey', price: '10 Dhs.', img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=800&auto=format&fit=crop' },
     ],
   },
 ];
@@ -167,7 +167,7 @@ const MenuPage = () => {
 
   return (
     <div className="menu-page" style={{ backgroundColor: '#FAF7F2', minHeight: '100vh', color: '#1A2E1A' }}>
-      
+
       {/* Premium Hero Section */}
       <div style={{
         position: 'relative',
@@ -186,8 +186,8 @@ const MenuPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div style={{ 
-              width: '64px', height: '64px', borderRadius: '50%', 
+            <div style={{
+              width: '64px', height: '64px', borderRadius: '50%',
               border: '2px solid rgba(255,255,255,0.3)', margin: '0 auto 20px',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               backgroundColor: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)'
@@ -209,7 +209,7 @@ const MenuPage = () => {
 
       <div className="container" style={{ paddingBottom: '120px' }}>
         {/* Category Sticky Navigation */}
-        <motion.div 
+        <motion.div
           className="menu-categories"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -232,42 +232,48 @@ const MenuPage = () => {
             {activeData.category}
           </h2>
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               className="menu-page-grid"
               key={activeCategory}
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-                gap: '20px 60px',
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+                gap: '24px 30px',
               }}
             >
               {activeData.items.map((item, index) => (
-                <div key={`${item.name}-${index}`} className="menu-item-row">
-                  <div className="menu-item-img-wrapper">
-                    <img 
-                      src={item.img} 
-                      alt={item.name} 
+                <div key={`${item.name}-${index}`} className="menu-item-card">
+                  <div className="menu-item-img-container">
+                    <img
+                      src={item.img}
+                      alt={item.name}
                       className="menu-item-img"
                       loading="lazy"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80';
+                      }}
                     />
                   </div>
-                  
-                  <div style={{ flex: 1, display: 'flex', alignItems: 'baseline' }}>
-                    <div style={{ flexShrink: 0 }}>
-                      <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', fontWeight: '700', color: '#1A2E1A' }}>
-                        {item.name}
-                      </h3>
-                    </div>
-                    {/* Dotted Connector */}
-                    <div style={{ flexGrow: 1, borderBottom: '2px dotted rgba(26, 46, 26, 0.2)', margin: '0 15px', position: 'relative', top: '-6px' }} />
-                    <div style={{ flexShrink: 0 }}>
-                      <span style={{ fontFamily: 'var(--font-serif)', fontSize: '20px', fontWeight: '700', color: 'var(--primary)', whiteSpace: 'nowrap' }}>
-                        {item.price}
-                      </span>
+                  <div className="menu-item-info">
+                    <h3>{item.name}</h3>
+                    <div className="menu-item-footer">
+                      <div className="menu-item-price">{item.price}</div>
+                      <motion.a
+                        href={`https://wa.me/971551053445?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name} (${item.price})`)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="order-now-btn"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <MessageCircle size={14} />
+                        <span>Order Now</span>
+                      </motion.a>
                     </div>
                   </div>
                 </div>
@@ -324,42 +330,107 @@ const MenuPage = () => {
           transform: translateY(-2px);
         }
 
-        .menu-item-row {
-          display: flex; 
-          align-items: center; 
+        .menu-item-card {
+          display: flex;
+          align-items: center;
+          padding: 16px;
+          background: #ffffff;
+          border-radius: 24px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          border: 1px solid rgba(0,0,0,0.02);
           gap: 20px;
-          padding: 15px;
+        }
+
+        .menu-item-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 20px 50px rgba(162, 12, 12, 0.08);
+          border-color: rgba(162, 12, 12, 0.1);
+        }
+
+        .menu-item-img-container {
+          width: 96px;
+          height: 96px;
           border-radius: 20px;
-          transition: all 0.3s ease;
-          border: 1px solid transparent;
-        }
-
-        .menu-item-row:hover {
-          background: rgba(250, 247, 242, 0.5);
-          border-color: rgba(26, 46, 26, 0.05);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-          transform: translateX(5px);
-        }
-
-        .menu-item-img-wrapper {
-          width: 80px; 
-          height: 80px; 
-          border-radius: 50%; 
           overflow: hidden;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
           flex-shrink: 0;
-          border: 3px solid white;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+          background-color: #f7f7f7;
         }
 
-        .menu-item-img {
-          width: 100%; 
-          height: 100%; 
+        .menu-item-img-container img {
+          width: 100%;
+          height: 100%;
           object-fit: cover;
-          transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: transform 0.6s ease;
         }
 
-        .menu-item-row:hover .menu-item-img {
-          transform: scale(1.1) rotate(3deg);
+        .menu-item-card:hover .menu-item-img-container img {
+          transform: scale(1.1);
+        }
+
+        .menu-item-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .menu-item-info h3 {
+          font-family: var(--font-serif, sans-serif);
+          font-size: 18px;
+          font-weight: 700;
+          color: #1A2E1A;
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .menu-item-price {
+          font-family: var(--font-serif, serif);
+          font-size: 16px;
+          font-weight: 800;
+          color: var(--primary);
+          background: #faf7f2;
+          display: inline-block;
+          padding: 6px 14px;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+        }
+
+        .menu-item-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 4px;
+        }
+
+        .order-now-btn {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          background: #25D366;
+          color: white;
+          padding: 6px 12px;
+          border-radius: 50px;
+          font-size: 13px;
+          font-weight: 700;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .order-now-btn:hover {
+          background: #128C7E;
+          box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+          transform: translateY(-1px);
+        }
+
+        .menu-item-card:hover .menu-item-price {
+          background: var(--primary);
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         @media (max-width: 768px) {
@@ -382,22 +453,37 @@ const MenuPage = () => {
             font-size: 14px;
           }
           .menu-page-grid-container {
-            padding: 30px 20px !important;
+            padding: 24px 16px !important;
+            border-radius: 20px !important;
           }
           .menu-page-grid {
             grid-template-columns: 1fr !important;
-            gap: 15px !important;
+            gap: 16px !important;
           }
-          .menu-item-row h3 {
-            font-size: 16px !important;
-            white-space: normal;
+          .menu-item-card {
+            padding: 12px;
+            border-radius: 16px;
+            gap: 16px;
           }
-          .menu-item-row span {
-            font-size: 16px !important;
+          .menu-item-img-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
           }
-          .menu-item-img-wrapper {
-            width: 60px;
-            height: 60px;
+          .menu-item-info h3 {
+            font-size: 16px;
+          }
+          .menu-item-price {
+            font-size: 14px;
+            padding: 4px 10px;
+          }
+          .order-now-btn {
+            font-size: 12px;
+            padding: 4px 10px;
+            gap: 4px;
+          }
+          .order-now-btn span {
+            display: inline-block;
           }
         }
       `}</style>

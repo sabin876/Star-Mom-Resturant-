@@ -571,7 +571,7 @@ function App() {
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <MessageCircle className="text-secondary" size={20} color="var(--secondary)" />
-                  <span>+971 50 000 000 (WhatsApp)</span>
+                  <span>+971 55 105 3445 (WhatsApp)</span>
                 </li>
               </ul>
             </motion.div>
@@ -614,7 +614,7 @@ function App() {
           <Phone size={24} />
         </motion.a>
         <motion.a
-          href="https://wa.me/97150000000"
+          href="https://wa.me/971551053445"
           target="_blank"
           className="floating-btn whatsapp"
           initial={{ scale: 0, opacity: 0 }}
