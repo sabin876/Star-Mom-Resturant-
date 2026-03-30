@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Utensils, MessageCircle } from 'lucide-react';
+import { 
+  Utensils, 
+  MessageCircle, 
+  Coffee, 
+  Flame, 
+  ChefHat, 
+  Sparkles, 
+  Mountain, 
+  Star, 
+  Soup, 
+  GlassWater, 
+  Wheat, 
+  Beef,
+  UtensilsCrossed
+} from 'lucide-react';
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
@@ -152,6 +166,21 @@ const menuData = [
   },
 ];
 
+const categoryIcons = {
+  'Breakfast': <Coffee size={18} />,
+  'Taas Set': <Flame size={18} />,
+  'Chewra Set': <Wheat size={18} />,
+  'Khaja Set': <ChefHat size={18} />,
+  'Sekuwa Set': <Beef size={18} />,
+  'Special Khata': <Sparkles size={18} />,
+  'Thakali Set': <Utensils size={18} />,
+  'Dhido Set': <Mountain size={18} />,
+  'Star Momo Special': <Star size={18} />,
+  'Indian Cuisine': <UtensilsCrossed size={18} />,
+  'Biryani / Fried Rice': <Soup size={18} />,
+  'Drinks': <GlassWater size={18} />,
+};
+
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState(menuData[0].category);
   const activeData = menuData.find(cat => cat.category === activeCategory) || menuData[0];
@@ -212,7 +241,8 @@ const MenuPage = () => {
               className={`category-btn ${activeCategory === cat.category ? 'active' : ''}`}
               onClick={() => setActiveCategory(cat.category)}
             >
-              {cat.category}
+              <span className="category-icon">{categoryIcons[cat.category] || <Utensils size={18} />}</span>
+              <span className="category-label">{cat.category}</span>
             </button>
           ))}
         </motion.div>
@@ -282,46 +312,68 @@ const MenuPage = () => {
           justify-content: center;
           gap: 12px;
           margin-bottom: 50px;
-          max-width: 1100px;
+          max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
           position: sticky;
           top: 70px;
           z-index: 100;
-          background: rgba(250, 247, 242, 0.95);
-          backdrop-filter: blur(15px);
-          -webkit-backdrop-filter: blur(15px);
-          padding: 15px 0;
-          border-radius: 20px;
-          border-bottom: 1px solid rgba(0,0,0,0.05);
+          background: rgba(250, 247, 242, 0.8);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          padding: 20px;
+          border-radius: 30px;
+          transition: all 0.4s ease;
         }
         
         .category-btn {
+          display: flex;
+          align-items: center;
+          gap: 10px;
           background: white;
-          border: 1px solid rgba(26, 46, 26, 0.1);
-          padding: 12px 24px;
-          border-radius: 50px;
-          color: #1A2E1A;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+          padding: 10px 22px;
+          border-radius: 100px;
+          color: #4A5568;
           font-family: var(--font-sans);
           font-size: 15px;
           font-weight: 600;
           cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+          white-space: nowrap;
         }
         
         .category-btn:hover {
-          background: rgba(26, 46, 26, 0.03);
+          background: #f8fafc;
           transform: translateY(-2px);
-          box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+          border-color: rgba(0,0,0,0.1);
         }
         
         .category-btn.active {
-          background: var(--primary);
+          background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
           color: white;
-          border-color: var(--primary);
-          box-shadow: 0 8px 20px rgba(162, 12, 12, 0.3);
-          transform: translateY(-2px);
+          border-color: transparent;
+          box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+          transform: translateY(-2px) scale(1.05);
+        }
+
+        .category-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.85;
+          transition: transform 0.3s ease;
+        }
+
+        .category-btn.active .category-icon {
+          opacity: 1;
+          transform: rotate(-8deg);
+        }
+
+        .category-btn:not(.active) .category-icon {
+          color: #8B5CF6; /* Subtle purple for icons in inactive state */
         }
 
         .menu-item-card {
