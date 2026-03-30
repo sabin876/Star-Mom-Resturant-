@@ -13,7 +13,6 @@ import {
   X
 } from 'lucide-react';
 import './App.css';
-import MenuBook from './components/MenuBook';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import GoogleReviews from './components/GoogleReviews';
@@ -401,50 +400,6 @@ function App() {
             </div>
           </section>
 
-          {/* Menu Section */}
-          <section id="menu" className="section-padding">
-            <div className="container">
-              <motion.div style={{ textAlign: 'center', marginBottom: '80px' }} {...fadeInUp}>
-                <motion.span
-                  style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px', display: 'inline-block' }}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  Chef&apos;s Specials
-                </motion.span>
-                <motion.h2
-                  style={{ fontSize: '48px', marginTop: '10px' }}
-                  initial={{ opacity: 0, y: 22 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.08 }}
-                >
-                  Our Signature Menu Book
-                </motion.h2>
-                <motion.div
-                  className="section-title-bar"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7, ease: easeOutExpo, delay: 0.15 }}
-                  style={{ width: '120px', height: '4px', background: 'linear-gradient(90deg, var(--secondary), var(--accent))', margin: '20px auto', borderRadius: '4px', transformOrigin: 'center' }}
-                />
-                <motion.p
-                  style={{ color: 'var(--text-muted)', fontSize: '18px' }}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.35, duration: 0.5 }}
-                >
-                  Flip through our authentic Nepalese delicacies. Click the edges to turn pages!
-                </motion.p>
-              </motion.div>
-
-              <MenuBook />
-            </div>
-          </section>
 
           {/* Services Section */}
           <section id="services" className="section-padding services-section-premium" style={{ backgroundColor: '#0A1A0A', position: 'relative', overflow: 'hidden' }}>
