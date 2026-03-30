@@ -1,16 +1,28 @@
-# React + Vite
+# Star Momo House - Authentic Taste of Nepal in Dubai
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official repository for the **Star Momo House** restaurant website. This is a premium, responsive web application designed to showcase the authentic flavors of Nepal right in the heart of Dubai.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+The site is configured for deployment on Vercel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **Interactive Menu Book**: A realistic 3D flipping menu book featuring our full digital menu.
+- **WhatsApp Ordering**: Integrated "Order Now" functionality for every dish, pre-filling a WhatsApp message with the item and price.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing.
+- **Premium Aesthetics**: Modern UI with smooth animations (Framer Motion) and elegant glassmorphism effects.
+- **Google Reviews**: Integrated showcase of guest experiences and direct links to our Google Maps listing.
 
-## React Compiler
+## 🛠️ Technology Stack
+- **Frontend**: React.js with Vite
+- **Styling**: Vanilla CSS (Premium Custom Design)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📞 Contact Information
+- **Address**: Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.
+- **Phone**: +971 4 331 2767
+- **WhatsApp**: +971 55 105 3445
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+© 2026 Star Momo House Restaurant L.L.C. All rights reserved.
