@@ -270,7 +270,7 @@ function App() {
                   >
                     Experience the Authentic Taste of Nepal
                   </motion.span>
-                  <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(48px, 8vw, 90px)', lineHeight: '1.1' }}>
+                  <h1 className="hero-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(32px, 8vw, 90px)', lineHeight: '1.1' }}>
                     <motion.span
                       style={{ color: 'var(--secondary)', display: 'block', marginBottom: '10px' }}
                       initial={{ opacity: 0, y: 48, rotateX: -25 }}
@@ -299,7 +299,7 @@ function App() {
                     Bringing the legendary Himalayan flavors to the heart of Dubai. Hand-crafted dumplings, traditional spices, and warm hospitality.
                   </motion.p>
                   <motion.div
-                    style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}
+                    style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.15, duration: 0.5 }}

@@ -1114,14 +1114,32 @@ ul {
 
 /* Mobile Media Queries Consolidated */
 @media (max-width: 768px) {
-  .hero h1 { font-size: clamp(40px, 10vw, 56px); }
+  .hero h1 { font-size: clamp(32px, 10vw, 56px); }
   .section-padding { padding: 60px 0; }
   .partner-grid { gap: 30px; }
   
   .navbar { height: 70px; }
   
   .hero-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 24px;
+  }
+
+  .hero-text-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+    letter-spacing: 1.5px;
+    max-width: 100%;
+    white-space: normal;
   }
 
   .menu-book-container { padding: 30px 10px; }
@@ -1137,7 +1155,8 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 42px; }
+  .hero h1 { font-size: 36px; }
+  .hero-badge { font-size: 11px; }
 }
 
 /* Google Reviews Section */
