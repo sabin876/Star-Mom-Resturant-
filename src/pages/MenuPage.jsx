@@ -234,6 +234,7 @@ const MenuPage = () => {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
                 gap: '24px 30px',
+                width: '100%'
               }}
             >
               {activeData.items.map((item, index) => (

@@ -1120,6 +1120,10 @@ ul {
   
   .navbar { height: 70px; }
   
+  .hero-featured-image {
+    display: none !important;
+  }
+
   .hero-content-wrapper {
     flex-direction: column;
     align-items: center;
@@ -1142,8 +1146,6 @@ ul {
     white-space: normal;
   }
 
-  .menu-book-container { padding: 30px 10px; }
-  
   .services-premium-grid {
     grid-template-columns: 1fr;
     gap: 20px;
