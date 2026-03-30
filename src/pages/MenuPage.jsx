@@ -484,19 +484,14 @@ const MenuPage = () => {
             top: 70px;
             gap: 10px;
             padding: 15px;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-          }
-          .menu-categories::-webkit-scrollbar {
-            display: none;
+            flex-wrap: wrap; /* Changed to wrap to match user's design reference */
+            justify-content: center;
           }
           .category-btn {
             flex-shrink: 0;
-            padding: 8px 18px;
-            font-size: 14px;
+            padding: 10px 18px;
+            font-size: 13px;
+            gap: 8px;
           }
           .menu-page-grid-container {
             padding: 24px 16px !important;

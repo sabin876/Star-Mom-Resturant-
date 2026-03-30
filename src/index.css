@@ -209,15 +209,15 @@ ul {
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
   z-index: 1005;
   padding: 120px 40px 60px;
   display: flex;
   flex-direction: column;
-  box-shadow: -15px 0 45px rgba(0,0,0,0.15);
-  border-left: 1px solid rgba(26, 93, 26, 0.1);
+  box-shadow: -20px 0 50px rgba(0,0,0,0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-nav-links {
@@ -433,10 +433,11 @@ ul {
 
 .hero h1 {
   font-size: clamp(48px, 8vw, 90px);
-  line-height: 1;
+  line-height: 1.1;
   margin-bottom: 30px;
   font-family: var(--font-serif);
-  text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+  text-shadow: 2px 4px 15px rgba(0,0,0,0.45);
+  color: white;
 }
 
 .hero-description {
@@ -537,7 +538,13 @@ ul {
   }
   
   .about-stat-card {
-    padding: 15px !important;
+    padding: 18px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    bottom: -15px !important;
+    width: 80% !important;
+    text-align: center;
   }
 }
 
@@ -585,12 +592,6 @@ ul {
   letter-spacing: 2px;
 }
 
-.hero h1 {
-  font-size: 84px;
-  color: white;
-  margin-bottom: 24px;
-  text-shadow: 2px 4px 10px rgba(0,0,0,0.3);
-}
 
 .hero p {
   font-size: 20px;
@@ -1157,8 +1158,9 @@ ul {
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 36px; }
-  .hero-badge { font-size: 11px; }
+  .hero h1 { font-size: clamp(40px, 12vw, 48px); line-height: 1.1; }
+  .hero-badge { font-size: 10px; padding: 5px 12px; }
+  .container { padding: 0 20px; }
 }
 
 /* Google Reviews Section */
@@ -1226,7 +1228,8 @@ ul {
 
 @media (max-width: 768px) {
   .reviews-marquee-track {
-    animation-duration: 40s; /* Faster feel but shorter distance on smaller cards */
+    animation-duration: 55s; /* Slower for easier reading on smaller screens */
+    gap: 20px;
   }
 }
 
