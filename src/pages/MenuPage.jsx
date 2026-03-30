@@ -286,7 +286,7 @@ const MenuPage = () => {
                     <div className="menu-item-footer">
                       <div className="menu-item-price">{item.price}</div>
                       <motion.a
-                        href={`https://wa.me/971551053445?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name} (${item.price})`)}`}
+                        href={`https://wa.me/97150000000?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name} (${item.price})`)}`}
                         target="_blank"
                         rel="noreferrer"
                         className="order-now-btn"
