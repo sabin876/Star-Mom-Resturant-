@@ -2,17 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Utensils, MessageCircle } from 'lucide-react';
 
-// Local assets mapping
-const assetModules = import.meta.glob('/src/assets/menu *.png', {
-  eager: true,
-  import: 'default',
-});
-
-const menuImages = Object.keys(assetModules).reduce((acc, path) => {
-  const match = path.match(/menu (\d+)\.png/);
-  if (match) acc[match[1]] = assetModules[path];
-  return acc;
-}, {});
+// ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
+void motion;
 
 // Authentic realistic placeholder images mapped to each item
 const menuData = [

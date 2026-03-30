@@ -18,6 +18,9 @@ const TikTokIcon = ({ size = 24 }) => (
   </svg>
 );
 
+// ESLint workaround
+void motion;
+
 const pageVariants = {
   hidden: { opacity: 0 },
   visible: { 
@@ -40,27 +43,36 @@ const phone = '+971 4 331 2767';
 const whatsapp = '+971 55 105 3445';
 const mapLink = 'https://maps.app.goo.gl/pGnZDFpJLvWLcFVu5';
 
+const particlesData = Array.from({ length: 20 }).map(() => ({
+  initialX: Math.random() * 100 + '%',
+  initialY: Math.random() * 100 + '%',
+  initialOpacity: Math.random() * 0.5 + 0.2,
+  initialScale: Math.random() * 0.5 + 0.5,
+  animateY: Math.random() * 100 + '%',
+  animateX: Math.random() * 100 + '%',
+  duration: Math.random() * 20 + 20
+}));
+
 // Particle component for enhanced background animation
 const Particles = () => {
-  const particles = Array.from({ length: 20 });
   return (
     <div className="particles-container" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
-      {particles.map((_, i) => (
+      {particlesData.map((data, i) => (
         <motion.div
           key={i}
           initial={{ 
-            x: Math.random() * 100 + '%', 
-            y: Math.random() * 100 + '%', 
-            opacity: Math.random() * 0.5 + 0.2,
-            scale: Math.random() * 0.5 + 0.5 
+            x: data.initialX, 
+            y: data.initialY, 
+            opacity: data.initialOpacity,
+            scale: data.initialScale 
           }}
           animate={{ 
-            y: [null, Math.random() * 100 + '%'],
-            x: [null, Math.random() * 100 + '%'],
+            y: [null, data.animateY],
+            x: [null, data.animateX],
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{ 
-            duration: Math.random() * 20 + 20, 
+            duration: data.duration, 
             repeat: Infinity, 
             ease: "linear" 
           }}
@@ -204,7 +216,8 @@ function ContactPage() {
                 <h3>Follow Our Journey</h3>
                 <div className="social-links-premium">
                   <motion.a 
-                    href="#" 
+                    href="https://facebook.com/starmomouae" 
+                    target="_blank"
                     className="social-btn-premium"
                     whileHover={{ scale: 1.15, rotate: 12, background: 'var(--secondary)', color: 'var(--primary)' }}
                     whileTap={{ scale: 0.9 }}
@@ -212,7 +225,8 @@ function ContactPage() {
                     <Facebook />
                   </motion.a>
                   <motion.a 
-                    href="#" 
+                    href="https://instagram.com/starmomouae" 
+                    target="_blank"
                     className="social-btn-premium"
                     whileHover={{ scale: 1.15, rotate: -12, background: 'var(--secondary)', color: 'var(--primary)' }}
                     whileTap={{ scale: 0.9 }}
@@ -220,7 +234,8 @@ function ContactPage() {
                     <Instagram />
                   </motion.a>
                   <motion.a 
-                    href="#" 
+                    href="https://tiktok.com/@starmomouae" 
+                    target="_blank"
                     className="social-btn-premium"
                     whileHover={{ scale: 1.15, rotate: 12, background: 'var(--secondary)', color: 'var(--primary)' }}
                     whileTap={{ scale: 0.9 }}

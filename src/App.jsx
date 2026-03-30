@@ -60,23 +60,6 @@ const clipReveal = {
   transition: { duration: 1.1, ease: [0.22, 1, 0.36, 1] },
 };
 
-const serviceCardVariants = [
-  {
-    initial: { opacity: 0, x: -50, rotate: -2 },
-    whileInView: { opacity: 1, x: 0, rotate: 0 },
-    transition: { duration: 0.65, ease: easeOutExpo },
-  },
-  {
-    initial: { opacity: 0, y: 60, scale: 0.92 },
-    whileInView: { opacity: 1, y: 0, scale: 1 },
-    transition: { duration: 0.65, ease: easeOutExpo },
-  },
-  {
-    initial: { opacity: 0, x: 50, rotate: 2 },
-    whileInView: { opacity: 1, x: 0, rotate: 0 },
-    transition: { duration: 0.65, ease: easeOutExpo },
-  },
-];
 
 const footerVariants = {
   hidden: {},
@@ -542,9 +525,9 @@ function App() {
               </div>
               <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8' }}>Authentic taste of Nepal in Dubai. Experience the true essence of Himalayan flavors with every bite.</p>
               <div className="social-links">
-                <motion.a href="#" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
-                <motion.a href="#" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Instagram size={20} /></motion.a>
-                <motion.a href="#" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
+                <motion.a href="https://facebook.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
+                <motion.a href="https://instagram.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Instagram size={20} /></motion.a>
+                <motion.a href="https://wa.me/971551053445" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
               </div>
             </motion.div>
             <motion.div className="footer-col" variants={footerItem}>
