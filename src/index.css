@@ -65,8 +65,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--primary);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
 }
+
+h1 { font-size: clamp(2.8rem, 10vw, 5.5rem); }
+h2 { font-size: clamp(2.2rem, 8vw, 4rem); }
+h3 { font-size: clamp(1.6rem, 5vw, 2.4rem); }
 
 a {
   text-decoration: none;
@@ -82,6 +86,18 @@ ul {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .section-padding {
@@ -160,7 +176,7 @@ ul {
 }
 
 .nav-logo .logo-img {
-  height: 120px;
+  height: clamp(60px, 12vw, 100px);
   width: auto;
   object-fit: contain;
 }
@@ -190,15 +206,18 @@ ul {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%;
+  width: 100%;
   max-width: 400px;
   height: 100vh;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 1005;
-  padding: 120px 40px 40px;
+  padding: 120px 40px 60px;
   display: flex;
   flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  box-shadow: -15px 0 45px rgba(0,0,0,0.15);
+  border-left: 1px solid rgba(26, 93, 26, 0.1);
 }
 
 .mobile-nav-links {
@@ -233,7 +252,13 @@ ul {
   }
 
   .nav-logo .logo-img {
-    height: 80px !important;
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo .logo-img {
+    height: 60px !important;
   }
 }
 
@@ -423,14 +448,34 @@ ul {
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 60px;
+    display: flex;
+    align-items: center;
+  }
+
   .hero-featured-image {
-    display: none;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    max-height: 400px;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .hero-featured-image img {
+    height: auto;
+    width: 80%;
+    max-width: 350px;
   }
   
   .hero-content-wrapper {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    gap: 30px;
   }
 
   .hero-text-content {
@@ -466,13 +511,15 @@ ul {
 @media (max-width: 1024px) {
   .about-image {
     height: 400px !important;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    grid-row: 1; /* Move image to top */
   }
 
   .about-stat-card {
-    right: 20px !important;
+    right: 0 !important;
     bottom: -20px !important;
-    padding: 20px !important;
+    padding: 25px !important;
+    transform: none !important;
   }
 
   .about-stat-card h3 {
@@ -1065,35 +1112,32 @@ ul {
   }
 }
 
-@media (max-width: 1024px) {
-  .hero h1 { font-size: 64px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .hero-content-wrapper { gap: 24px; }
-  .menu-book-container { padding: 60px 10px; }
-}
-
+/* Mobile Media Queries Consolidated */
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hero h1 { font-size: 48px; }
+  .hero h1 { font-size: clamp(40px, 10vw, 56px); }
   .section-padding { padding: 60px 0; }
   .partner-grid { gap: 30px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-
+  
   .navbar { height: 70px; }
-  .navbar .nav-logo img { height: 90px !important; }
-
+  
   .hero-content-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 22px;
+    gap: 24px;
   }
 
   .menu-book-container { padding: 30px 10px; }
+  
+  .services-premium-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card-inner {
+    padding: 40px 24px;
+  }
 }
 
 @media (max-width: 480px) {
-  .container { padding: 0 16px; }
-  .navbar .nav-logo img { height: 78px !important; }
+  .hero h1 { font-size: 42px; }
 }
 
 /* Google Reviews Section */
@@ -1159,6 +1203,12 @@ ul {
   will-change: transform;
 }
 
+@media (max-width: 768px) {
+  .reviews-marquee-track {
+    animation-duration: 40s; /* Faster feel but shorter distance on smaller cards */
+  }
+}
+
 .reviews-marquee-track:hover {
   animation-play-state: paused;
 }
@@ -1169,7 +1219,7 @@ ul {
 }
 
 .review-card-premium {
-  width: 450px;
+  width: min(450px, 85vw);
   flex-shrink: 0;
 }
 
@@ -1312,9 +1362,21 @@ ul {
 
 .contact-details-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 40px;
   align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .map-side {
+    height: 400px;
+    min-height: auto;
+  }
 }
 
 .contact-info-side {

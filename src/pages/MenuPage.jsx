@@ -162,14 +162,14 @@ const MenuPage = () => {
       {/* Premium Hero Section */}
       <div style={{
         position: 'relative',
-        padding: '160px 0 80px',
+        padding: 'clamp(120px, 15vw, 160px) 0 clamp(60px, 10vw, 80px)',
         background: 'linear-gradient(rgba(10, 26, 10, 0.85), rgba(10, 26, 10, 0.95)), url("https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=2000&auto=format&fit=crop")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
         textAlign: 'center',
         color: 'white',
-        marginBottom: '60px'
+        marginBottom: 'clamp(30px, 8vw, 60px)'
       }}>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <motion.div
@@ -287,10 +287,12 @@ const MenuPage = () => {
           position: sticky;
           top: 70px;
           z-index: 100;
-          background: rgba(250, 247, 242, 0.9);
-          backdrop-filter: blur(10px);
-          padding: 20px 0;
+          background: rgba(250, 247, 242, 0.95);
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+          padding: 15px 0;
           border-radius: 20px;
+          border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         
         .category-btn {

@@ -136,10 +136,10 @@ function ContactPage() {
       {/* Enhanced Particle Background */}
       <Particles />
 
-      <header className="contact-hero" style={{ position: 'relative', zIndex: 1 }}>
+      <header className="contact-hero" style={{ position: 'relative', zIndex: 1, padding: 'clamp(120px, 15vw, 160px) 0 40px' }}>
         <div className="container">
-          <motion.h1 className="contact-title" variants={itemVariants}>
-            <span>Get in Touch</span>
+          <motion.h1 className="contact-title" variants={itemVariants} style={{ fontSize: 'clamp(2rem, 8vw, 3.5rem)' }}>
+            <span style={{ fontSize: 'clamp(12px, 3vw, 14px)' }}>Get in Touch</span>
             Experience Our Hospitality
           </motion.h1>
           <motion.p className="contact-subtitle" variants={itemVariants}>
@@ -254,7 +254,8 @@ function ContactPage() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+                style={{ borderRadius: '20px' }}
+              ></iframe >
             </motion.div>
           </div>
         </div>

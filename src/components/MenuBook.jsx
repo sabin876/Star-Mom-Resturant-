@@ -38,21 +38,24 @@ const MenuBook = () => {
       
       // Determine if it should be portrait (single page) or landscape (two pages)
       const mobile = w <= 768;
+      const smallMobile = w <= 480;
       setIsPortrait(mobile);
 
       let width;
       if (mobile) {
         // Mobile view: single page
-        width = Math.min(w - 60, 450); // Single page width
+        width = smallMobile ? w - 32 : Math.min(w - 60, 500); 
       } else {
         // Desktop/Tablet: two pages
-        if (w <= 1024) width = 900;
+        if (w <= 1024) width = w * 0.9;
         else width = 1000;
       }
 
+      const calculatedHeight = Math.round((mobile ? width : width / 2) * ratio);
+      
       setBookSize({
-        width: mobile ? width : width, // This is the container width
-        height: Math.round((mobile ? width : width / 2) * ratio),
+        width: width,
+        height: calculatedHeight,
       });
     };
 
