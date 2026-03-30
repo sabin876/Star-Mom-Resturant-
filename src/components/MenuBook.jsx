@@ -5,8 +5,6 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const menuBookEase = [0.22, 1, 0.36, 1];
 
-// ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
-void motion;
 
 import menu1 from '../assets/menu 1.png';
 import menu2 from '../assets/menu 2.png';

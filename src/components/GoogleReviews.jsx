@@ -37,8 +37,6 @@ const reviews = [
   }
 ];
 
-// ESLint workaround
-void motion;
 
 const ReviewCard = ({ review }) => (
   <motion.div 

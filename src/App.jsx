@@ -19,8 +19,7 @@ import ContactPage from './pages/ContactPage';
 import GoogleReviews from './components/GoogleReviews';
 import MenuPage from './pages/MenuPage';
 
-// ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
-void motion;
+
 
 const easeOutExpo = [0.16, 1, 0.3, 1];
 
