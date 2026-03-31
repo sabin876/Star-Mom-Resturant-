@@ -160,7 +160,7 @@ function App() {
           </motion.ul>
 
           <motion.div className="nav-actions desktop-only" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.55, duration: 0.45 }}>
-            <motion.a href="tel:+971559419176" className="btn btn-primary" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.98 }}>
+            <motion.a href="tel:+97143312767" className="btn btn-primary" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.98 }}>
               <Phone size={18} />
               <span>Call Now</span>
             </motion.a>
@@ -198,7 +198,7 @@ function App() {
                 })}
               </ul>
               <div className="mobile-menu-footer">
-                <a href="tel:+971559419176" className="btn btn-primary w-full">
+                <a href="tel:+97143312767" className="btn btn-primary w-full">
                   <Phone size={18} />
                   <span>Call Now</span>
                 </a>
@@ -306,7 +306,7 @@ function App() {
                       <motion.a href="#menu" className="btn btn-primary" whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.97 }}>
                         Discover Menu
                       </motion.a>
-                      <motion.a href="tel:+971559419176" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.12)' }} whileTap={{ scale: 0.97 }}>
+                      <motion.a href="tel:+97143312767" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.12)' }} whileTap={{ scale: 0.97 }}>
                         Call Now
                       </motion.a>
                     </motion.div>
@@ -504,7 +504,7 @@ function App() {
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <Phone className="text-secondary" size={20} color="var(--secondary)" />
-                  <span>+971 55 941 9176</span>
+                  <span>+971 4 331 2767</span>
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <MessageCircle className="text-secondary" size={20} color="var(--secondary)" />
@@ -540,7 +540,7 @@ function App() {
       {/* Floating Contact Buttons */}
       <div className="floating-contact">
         <motion.a
-          href="tel:+971559419176"
+          href="tel:+97143312767"
           className="floating-btn call"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
