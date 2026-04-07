@@ -43,15 +43,23 @@ const phone = '+971 4 331 2767';
 const whatsapp = '+971 55 941 9176';
 const mapLink = 'https://maps.app.goo.gl/pGnZDFpJLvWLcFVu5';
 
-const particlesData = Array.from({ length: 20 }).map(() => ({
-  initialX: Math.random() * 100 + '%',
-  initialY: Math.random() * 100 + '%',
-  initialOpacity: Math.random() * 0.5 + 0.2,
-  initialScale: Math.random() * 0.5 + 0.5,
-  animateY: Math.random() * 100 + '%',
-  animateX: Math.random() * 100 + '%',
-  duration: Math.random() * 20 + 20
-}));
+const particlesData = [
+  { initialX: '10%', initialY: '20%', initialOpacity: 0.3, initialScale: 0.6, animateY: '80%', animateX: '15%', duration: 25 },
+  { initialX: '85%', initialY: '15%', initialOpacity: 0.4, initialScale: 0.8, animateY: '10%', animateX: '70%', duration: 30 },
+  { initialX: '40%', initialY: '50%', initialOpacity: 0.2, initialScale: 0.5, animateY: '90%', animateX: '45%', duration: 22 },
+  { initialX: '70%', initialY: '40%', initialOpacity: 0.5, initialScale: 0.7, animateY: '30%', animateX: '80%', duration: 28 },
+  { initialX: '20%', initialY: '80%', initialOpacity: 0.3, initialScale: 0.6, animateY: '20%', animateX: '25%', duration: 35 },
+  { initialX: '90%', initialY: '70%', initialOpacity: 0.4, initialScale: 0.9, animateY: '60%', animateX: '85%', duration: 26 },
+  { initialX: '30%', initialY: '10%', initialOpacity: 0.2, initialScale: 0.4, animateY: '40%', animateX: '35%', duration: 32 },
+  { initialX: '60%', initialY: '90%', initialOpacity: 0.3, initialScale: 0.7, animateY: '50%', animateX: '55%', duration: 24 },
+  { initialX: '15%', initialY: '35%', initialOpacity: 0.4, initialScale: 0.8, animateY: '75%', animateX: '20%', duration: 29 },
+  { initialX: '80%', initialY: '60%', initialOpacity: 0.5, initialScale: 0.6, animateY: '25%', animateX: '75%', duration: 31 },
+  { initialX: '50%', initialY: '30%', initialOpacity: 0.3, initialScale: 0.5, animateY: '70%', animateX: '60%', duration: 27 },
+  { initialX: '25%', initialY: '65%', initialOpacity: 0.2, initialScale: 0.7, animateY: '15%', animateX: '30%', duration: 33 },
+  { initialX: '75%', initialY: '85%', initialOpacity: 0.4, initialScale: 0.9, animateY: '45%', animateX: '80%', duration: 23 },
+  { initialX: '35%', initialY: '75%', initialOpacity: 0.5, initialScale: 0.6, animateY: '95%', animateX: '40%', duration: 34 },
+  { initialX: '65%', initialY: '25%', initialOpacity: 0.3, initialScale: 0.8, animateY: '55%', animateX: '60%', duration: 21 }
+];
 
 // Particle component for enhanced background animation
 const Particles = () => {
@@ -216,7 +224,7 @@ function ContactPage() {
                 <h3>Follow Our Journey</h3>
                 <div className="social-links-premium">
                   <motion.a 
-                    href="https://facebook.com/starmomouae" 
+                    href="https://share.google/ir2bwjyUdijmDxw7h" 
                     target="_blank"
                     className="social-btn-premium"
                     whileHover={{ scale: 1.15, rotate: 12, background: 'var(--secondary)', color: 'var(--primary)' }}

@@ -85,6 +85,7 @@ const heroImages = [
   assetModules['/src/assets/Hero section 2.webp'],
 ];
 const featuredImg = assetModules['/src/assets/DSC_0806(1).png'];
+const historyBg = assetModules['/src/assets/history-bg.png'];
 
 function App() {
   const routePath =
@@ -98,6 +99,7 @@ function App() {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isStoryOpen, setIsStoryOpen] = useState(false);
   const [currentHero, setCurrentHero] = useState(0);
   const { scrollYProgress } = useScroll();
   const scrollSpring = useSpring(scrollYProgress, { stiffness: 120, damping: 28, restDelta: 0.001 });
@@ -346,7 +348,7 @@ function App() {
                   className="about-image about-image--motion"
                   {...clipReveal}
                   style={{
-                    backgroundImage: 'url("https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&q=80&w=1200")',
+                    backgroundImage: `url("${historyBg}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '600px',
@@ -394,9 +396,17 @@ function App() {
                 >
                   <span style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>Our History</span>
                   <h2 style={{ fontSize: '48px', margin: '15px 0 25px', lineHeight: '1.1' }}>Celebrating the Heart of Nepalese Cuisine</h2>
-                  <p style={{ fontSize: '18px', color: 'var(--text-muted)', marginBottom: '25px' }}>From the streets of Kathmandu to the heart of Dubai, Star Momo House brings you the authentic flavors that have been passed down through generations.</p>
-                  <p style={{ marginBottom: '35px' }}>We use only the freshest ingredients and hand-ground spices to ensure every momo tells a story of tradition, passion, and culinary mastery.</p>
-                  <motion.a href="#menu" className="btn btn-outline" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.98 }}>Explore Our Story</motion.a>
+                  <p style={{ fontSize: '18px', color: 'var(--text-muted)', marginBottom: '20px' }}>Our journey began with a simple dream: to share the authentic, soulful flavors of the Himalayas with the world. Starting as a small family kitchen, we've brought our secret recipes and passion for excellence to the heart of Dubai.</p>
+                  <p style={{ marginBottom: '20px', color: 'var(--text-muted)' }}>Every momo we serve is a testament to our heritage—hand-folded with care and seasoned with spices sourced directly from Nepal. We believe that food is not just about sustenance; it's a bridge to our culture and a taste of home.</p>
+                  <p style={{ marginBottom: '35px', color: 'var(--text-muted)' }}>Today, Star Momo House stands as a beacon of Himalayan hospitality, where tradition meets modern culinary mastery to create an unforgettable dining experience for every guest.</p>
+                  <motion.button 
+                    onClick={() => setIsStoryOpen(true)}
+                    className="btn btn-outline" 
+                    whileHover={{ scale: 1.04, y: -2 }} 
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Explore Our Story
+                  </motion.button>
                 </motion.div>
               </div>
             </div>
@@ -468,7 +478,7 @@ function App() {
               </div>
               <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8' }}>Authentic taste of Nepal in Dubai. Experience the true essence of Himalayan flavors with every bite.</p>
               <div className="social-links">
-                <motion.a href="https://facebook.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
+                <motion.a href="https://share.google/ir2bwjyUdijmDxw7h" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
                 <motion.a href="https://instagram.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Instagram size={20} /></motion.a>
                 <motion.a href="https://wa.me/971559419176" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
               </div>
@@ -552,6 +562,107 @@ function App() {
           <MessageCircle size={24} />
         </motion.a>
       </div>
+
+      {/* Story Modal */}
+      <AnimatePresence>
+        {isStoryOpen && (
+          <motion.div 
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsStoryOpen(false)}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              zIndex: 2000,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '20px',
+              backdropFilter: 'blur(8px)'
+            }}
+          >
+            <motion.div 
+              className="modal-content"
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              onClick={e => e.stopPropagation()}
+              style={{
+                backgroundColor: 'var(--bg-alt)',
+                maxWidth: '800px',
+                width: '100%',
+                maxHeight: '90vh',
+                overflowY: 'auto',
+                borderRadius: 'var(--border-radius)',
+                padding: '50px',
+                position: 'relative',
+                boxShadow: 'var(--shadow-lg)',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}
+            >
+              <button 
+                onClick={() => setIsStoryOpen(false)}
+                style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '20px',
+                  background: 'none',
+                  border: 'none',
+                  color: 'white',
+                  cursor: 'pointer'
+                }}
+              >
+                <X size={24} />
+              </button>
+              
+              <div className="story-content">
+                <span style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>The Legend of Star Momo</span>
+                <h2 style={{ fontSize: '36px', margin: '15px 0 30px', color: 'var(--secondary)' }}>A Journey from the Himalayas to Dubai</h2>
+                
+                <div style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.8', fontSize: '17px' }}>
+                  <p style={{ marginBottom: '20px' }}>
+                    Every bowl of momo at Star Momo House carries the whispers of the mountain winds and the warmth of a Kathmandu hearth. Our story began decades ago in a small, hidden alley of Nepal, where our founder's grandmother would spend her mornings precisely hand-folding hundreds of dumplings for the community.
+                  </p>
+                  
+                  <blockquote style={{ 
+                    borderLeft: '4px solid var(--secondary)', 
+                    paddingLeft: '20px', 
+                    margin: '30px 0', 
+                    fontStyle: 'italic',
+                    color: 'white',
+                    fontSize: '20px'
+                  }}>
+                    "Food is not just ingredients; it's a memory of home, a gift of love, and a bridge between worlds."
+                  </blockquote>
+
+                  <p style={{ marginBottom: '20px' }}>
+                    When we moved to Dubai, we realized something was missing: the true, unadulterated soul of Nepalese street food. We didn't want to just open a restaurant; we wanted to create a sanctuary where the Nepalese diaspora could find a taste of home, and the diverse community of Dubai could experience the authentic magic of Himalayan cuisine.
+                  </p>
+
+                  <p style={{ marginBottom: '20px' }}>
+                    What makes us different? It's the <b>'Secret 12-Spice Blend'</b> we source directly from small farmers in Nepal. It's the patience we have in preparing our broth for 8 long hours. And most importantly, it's the love our chefs put into every single pinch of dough.
+                  </p>
+
+                  <p>
+                    Today, Star Momo House is more than just a place to eat—it's where stories are shared over steaming plates of Jhol Momo, where friendships are forged, and where the rich heritage of Nepal lives on in every bite.
+                  </p>
+                </div>
+
+                <div style={{ marginTop: '40px', display: 'flex', gap: '20px', alignItems: 'center' }}>
+                  <img src={logoImg} alt="Star Momo" style={{ height: '60px' }} />
+                  <div>
+                    <h4 style={{ color: 'white', marginBottom: '2px' }}>Star Momo House</h4>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>Est. 2008 in Spirit, 2024 in Dubai</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
