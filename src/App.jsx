@@ -86,6 +86,7 @@ const heroImages = [
   assetModules['/src/assets/Hero section 2.webp'],
 ];
 
+const featuredImg = assetModules['/src/assets/hero.png'];
 const historyBg = assetModules['/src/assets/Our History.jpeg'];
 
 function App() {
@@ -335,7 +336,7 @@ function App() {
                     y: { duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.6 },
                   }}
                 >
-                  <img src={historyBg} alt="Featured Nepalese Tradition" />
+                  <img src={featuredImg} alt="Featured Nepalese Tradition" />
                 </motion.div>
               </div>
             </div>
