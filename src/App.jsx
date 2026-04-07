@@ -86,7 +86,7 @@ const heroImages = [
   assetModules['/src/assets/Hero section 2.webp'],
 ];
 
-const featuredImg = assetModules['/src/assets/hero.png'];
+const featuredImg = assetModules['/src/assets/DSC_0806(1).png'];
 const historyBg = assetModules['/src/assets/Our History.jpeg'];
 
 function App() {
