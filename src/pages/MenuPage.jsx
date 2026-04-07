@@ -624,10 +624,16 @@ const MenuPage = () => {
             border-radius: 14px;
           }
 
+          .menu-page-grid-container h2 {
+            color: snow !important;
+          }
+
           .menu-item-info h3 {
             font-size: 15px;
             line-height: 1.3;
+            color: snow !important;
           }
+
 
           .menu-item-price {
             font-size: 13px;
