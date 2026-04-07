@@ -1,0 +1,163 @@
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import HTMLFlipBook from 'react-pageflip';
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const menuBookEase = [0.22, 1, 0.36, 1];
+
+
+import menu1 from '../assets/menu 1.png';
+import menu2 from '../assets/menu 2.png';
+import menu3 from '../assets/menu 3.png';
+import menu4 from '../assets/menu 4.png';
+import menu5 from '../assets/menu 5.png';
+import menu6 from '../assets/menu 6.png';
+import menu7 from '../assets/menu 7.png';
+import menu8 from '../assets/menu 8.png';
+import menu9 from '../assets/menu 9.png';
+import menu10 from '../assets/menu 10.png';
+import menu11 from '../assets/menu 11.png';
+import menu12 from '../assets/menu 12.png';
+import menu13 from '../assets/menu 13.png';
+import menu14 from '../assets/menu 14.png';
+
+const menuImages = [menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu9, menu10, menu11, menu12, menu13, menu14];
+
+const MenuBook = () => {
+  const bookRef = useRef();
+  const audioRef = useRef(new Audio('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3'));
+
+  const [bookSize, setBookSize] = useState({ width: 500, height: 700 });
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  const ratio = useMemo(() => 700 / 500, []);
+
+  useEffect(() => {
+    const calcSize = () => {
+      const w = window.innerWidth;
+      
+      // Determine if it should be portrait (single page) or landscape (two pages)
+      const mobile = w <= 768;
+      const smallMobile = w <= 480;
+      setIsPortrait(mobile);
+
+      let width;
+      if (mobile) {
+        // Mobile view: single page
+        width = smallMobile ? w - 32 : Math.min(w - 60, 500); 
+      } else {
+        // Desktop/Tablet: two pages
+        if (w <= 1024) width = w * 0.9;
+        else width = 1000;
+      }
+
+      const calculatedHeight = Math.round((mobile ? width : width / 2) * ratio);
+      
+      setBookSize({
+        width: width,
+        height: calculatedHeight,
+      });
+    };
+
+    calcSize();
+    window.addEventListener('resize', calcSize);
+    return () => window.removeEventListener('resize', calcSize);
+  }, [ratio]);
+
+  const onFlip = () => {
+    audioRef.current.play().catch(err => console.log("Audio play failed:", err));
+  };
+
+  const pages = menuImages;
+
+  const prevPage = () => {
+    if (bookRef.current) {
+      bookRef.current.pageFlip().flipPrev();
+    }
+  };
+
+  const nextPage = () => {
+    if (bookRef.current) {
+      bookRef.current.pageFlip().flipNext();
+    }
+  };
+
+  return (
+    <motion.div
+      className="menu-book-wrapper"
+      initial={{ opacity: 0, y: 48, rotateX: 8 }}
+      whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.9, ease: menuBookEase }}
+      style={{ perspective: '1600px' }}
+    >
+      <motion.button
+        type="button"
+        className="nav-arrow prev"
+        onClick={prevPage}
+        aria-label="Previous Page"
+        initial={{ opacity: 0, x: -24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        whileHover={{ scale: 1.12, x: -4 }}
+        whileTap={{ scale: 0.94 }}
+      >
+        <ChevronLeft size={32} />
+      </motion.button>
+
+      <div className="menu-book-container">
+        <div
+          style={{
+            width: '100%',
+            maxWidth: isPortrait ? `${bookSize.width}px` : `${bookSize.width}px`,
+            height: `${bookSize.height}px`,
+            position: 'relative',
+            margin: '0 auto',
+          }}
+        >
+          <HTMLFlipBook
+            width={isPortrait ? bookSize.width : bookSize.width / 2}
+            height={bookSize.height}
+            size="fixed"
+            mode={isPortrait ? "portrait" : "landscape"}
+            showCover={true}
+            usePortrait={isPortrait}
+            flippingTime={1000}
+            useMouseEvents={true}
+            clickEventForward={true}
+            mobileScrollSupport={true}
+            onFlip={onFlip}
+            className="menu-book"
+            ref={bookRef}
+          >
+            {pages.map((page, index) => (
+              <div key={index} className="page">
+                <div className="page-content" style={{ width: '100%', height: '100%' }}>
+                  <img src={page} alt={`Menu Page ${index + 1}`} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                </div>
+              </div>
+            ))}
+          </HTMLFlipBook>
+        </div>
+      </div>
+
+      <motion.button
+        type="button"
+        className="nav-arrow next"
+        onClick={nextPage}
+        aria-label="Next Page"
+        initial={{ opacity: 0, x: 24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        whileHover={{ scale: 1.12, x: 4 }}
+        whileTap={{ scale: 0.94 }}
+      >
+        <ChevronRight size={32} />
+      </motion.button>
+    </motion.div>
+  );
+};
+
+export default MenuBook;

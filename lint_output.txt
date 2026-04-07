@@ -1,0 +1,95 @@
+
+> resturant@0.0.0 lint
+> eslint .
+
+
+C:\Users\DELL\OneDrive\Desktop\Resturant\src\components\GoogleReviews.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                      no-unused-vars
+  40:7   error  'containerVariants' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  51:7   error  'cardVariants' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u       no-unused-vars
+
+C:\Users\DELL\OneDrive\Desktop\Resturant\src\pages\ContactPage.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  52:16  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  50 |           key={i}
+  51 |           initial={{ 
+> 52 |             x: Math.random() * 100 + '%', 
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  53 |             y: Math.random() * 100 + '%', 
+  54 |             opacity: Math.random() * 0.5 + 0.2,
+  55 |             scale: Math.random() * 0.5 + 0.5         react-hooks/purity
+  53:16  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  51 |           initial={{ 
+  52 |             x: Math.random() * 100 + '%', 
+> 53 |             y: Math.random() * 100 + '%', 
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  54 |             opacity: Math.random() * 0.5 + 0.2,
+  55 |             scale: Math.random() * 0.5 + 0.5 
+  56 |           }}             react-hooks/purity
+  54:22  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  52 |             x: Math.random() * 100 + '%', 
+  53 |             y: Math.random() * 100 + '%', 
+> 54 |             opacity: Math.random() * 0.5 + 0.2,
+     |                      ^^^^^^^^^^^^^ Cannot call impure function
+  55 |             scale: Math.random() * 0.5 + 0.5 
+  56 |           }}
+  57 |           animate={{        react-hooks/purity
+  55:20  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  53 |             y: Math.random() * 100 + '%', 
+  54 |             opacity: Math.random() * 0.5 + 0.2,
+> 55 |             scale: Math.random() * 0.5 + 0.5 
+     |                    ^^^^^^^^^^^^^ Cannot call impure function
+  56 |           }}
+  57 |           animate={{ 
+  58 |             y: [null, Math.random() * 100 + '%'],  react-hooks/purity
+  58:23  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  56 |           }}
+  57 |           animate={{ 
+> 58 |             y: [null, Math.random() * 100 + '%'],
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  59 |             x: [null, Math.random() * 100 + '%'],
+  60 |             opacity: [0.2, 0.5, 0.2]
+  61 |           }}                                    react-hooks/purity
+  59:23  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  57 |           animate={{ 
+  58 |             y: [null, Math.random() * 100 + '%'],
+> 59 |             x: [null, Math.random() * 100 + '%'],
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  60 |             opacity: [0.2, 0.5, 0.2]
+  61 |           }}
+  62 |           transition={{                         react-hooks/purity
+  63:23  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  61 |           }}
+  62 |           transition={{ 
+> 63 |             duration: Math.random() * 20 + 20, 
+     |                       ^^^^^^^^^^^^^ Cannot call impure function
+  64 |             repeat: Infinity, 
+  65 |             ease: "linear" 
+  66 |           }}                                                               react-hooks/purity
+
+C:\Users\DELL\OneDrive\Desktop\Resturant\src\pages\MenuPage.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 12 problems (12 errors, 0 warnings)
+
