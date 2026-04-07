@@ -535,78 +535,115 @@ const MenuPage = () => {
 
         @media (max-width: 768px) {
           .menu-categories {
-            top: 70px;
-            gap: 10px 14px;
-            padding: 24px 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            overflow-x: visible;
-            -webkit-overflow-scrolling: auto;
+            top: 60px;
+            gap: 8px;
+            padding: 12px 16px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            justify-content: flex-start;
             border-radius: 0;
-            background: #000000 !important;
-            margin-bottom: 40px;
+            background: rgba(250, 247, 242, 0.97) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            margin-bottom: 24px;
             max-width: 100vw;
             margin-left: -20px;
             margin-right: -20px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
           }
-          .menu-categories::after {
+
+          .menu-categories::-webkit-scrollbar {
             display: none;
           }
+
+          .menu-categories::after {
+            content: '';
+            flex: 0 0 16px;
+            display: block;
+          }
+
           .category-btn {
             flex-shrink: 0;
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid #d4af37 !important;
-            background: transparent !important;
-            color: #d4af37 !important;
-            border-radius: 6px !important;
-            box-shadow: none !important;
-            transition: all 0.2s ease;
+            font-weight: 600;
+            border-radius: 100px !important;
+            background: white !important;
+            color: #4A5568 !important;
+            border: 1px solid rgba(0,0,0,0.08) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+            white-space: nowrap;
+            gap: 6px;
           }
+
           .category-btn.active {
-            background: #d4af37 !important;
-            color: #000000 !important;
-            transform: scale(1.02);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+            background: var(--primary) !important;
+            color: white !important;
+            border-color: transparent !important;
+            box-shadow: 0 4px 15px rgba(26, 93, 26, 0.25) !important;
+            transform: none;
           }
+
           .category-icon {
-            display: none !important;
+            display: flex !important;
           }
+
           .menu-page-grid-container {
-            padding: 20px 12px !important;
-            border-radius: 0 !important;
-            background: transparent !important;
+            padding: 24px 16px !important;
+            border-radius: 20px !important;
+            background: white !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+            margin-bottom: 20px;
           }
+
           .menu-page-grid {
             grid-template-columns: 1fr !important;
-            gap: 16px !important;
+            gap: 14px !important;
           }
+
           .menu-item-card {
             padding: 14px;
-            border-radius: 16px;
+            border-radius: 18px;
             gap: 14px;
-            background: #ffffff;
+            background: #FAFAFA;
+            border: 1px solid rgba(0,0,0,0.05) !important;
           }
+
+          .menu-item-card:hover {
+            transform: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+          }
+
           .menu-item-img-container {
             width: 80px;
             height: 80px;
-            border-radius: 12px;
+            border-radius: 14px;
           }
-        }
+
           .menu-item-info h3 {
             font-size: 15px;
+            line-height: 1.3;
           }
+
           .menu-item-price {
             font-size: 13px;
-            padding: 3px 8px;
+            padding: 4px 10px;
           }
+
+          .menu-item-footer {
+            margin-top: 6px;
+          }
+
           .order-now-btn {
-            font-size: 11px;
-            padding: 4px 8px;
-            gap: 3px;
+            font-size: 12px;
+            padding: 5px 10px;
+            gap: 4px;
           }
+
           .order-now-btn span {
             display: inline-block;
           }
