@@ -7,11 +7,12 @@ import {
   Facebook,
   MessageCircle,
   Utensils,
-  Truck,
-  Users,
   Menu,
   X,
-  Flame
+  Flame,
+  Star,
+  Quote,
+  ExternalLink
 } from 'lucide-react';
 import './App.css';
 import GalleryPage from './pages/GalleryPage';
