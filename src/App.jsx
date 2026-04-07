@@ -335,7 +335,7 @@ function App() {
                     y: { duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.6 },
                   }}
                 >
-                  <img src={featuredImg} alt="Featured Nepalese Tradition" />
+                  <img src={historyBg} alt="Featured Nepalese Tradition" />
                 </motion.div>
               </div>
             </div>
