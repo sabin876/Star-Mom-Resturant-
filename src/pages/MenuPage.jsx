@@ -16,68 +16,91 @@ import {
   UtensilsCrossed
 } from 'lucide-react';
 
-import imgRoti from '../assets/Roti.jpg';
+import imgRoti from '../assets/roti.png';
+import imgRotiSet from '../assets/roti set.png';
+import imgPuriTarkari from '../assets/puri tarkari.png';
+import imgAndaBhurji from '../assets/anda bhurji1.png';
 import imgEggRoll from '../assets/Egg Roll.jpg';
+import imgEggPoach from '../assets/Egg Poach.webp';
 import imgPlainOmlette from '../assets/Plian Omlette.jpg';
 import imgMasalaOmlette from '../assets/MasalaOmlette.jpg';
 import imgParathaPlain from '../assets/Paratha.jpg';
 import imgParathaAloo from '../assets/Paratha Aloo.jpg';
 import imgChickenRollParatha from '../assets/Chicken Roll Paratha.jpg';
-import imgEggBhurji from '../assets/Egg Bhurji.jpg';
-import imgEggPoach from '../assets/Egg Poach.webp';
 import imgSelroti from '../assets/Selroti.jpg';
 
-import imgLaphingDry from '../assets/Laphing (Tibetan) - Dry.jpg';
-import imgLaphingJhol from '../assets/Laphing (Tibetan) - Jhol.jpg';
-import imgStarMomoPlatter from '../assets/Star Momo Platter.jpg';
-import imgWingsPlatter from '../assets/Wings Platter.jpg';
+// Khaja Set / Snacks
+import imgChickenChoila from '../assets/chicken choila.jpg';
+import imgBuffSukuti from '../assets/buff sukuti.jpg';
+import imgSpecialKhajaSet from '../assets/Special Khaja set.jpg';
+import imgChatpate from '../assets/chatpate.jpg';
+import imgPanipuri from '../assets/panipuri.png';
+import imgLaphing from '../assets/laphing.png';
+import imgChickenMuttonSekwaCombo from '../assets/chicken mutton sekwa combo .png';
+import imgMomoChowmeinCombo from '../assets/momo chowmein combo.jpg';
+import imgJumboCombo from '../assets/jumbo combo.jpg';
+import imgSpecialCombo from '../assets/special combo.jpg';
+import imgSpecialComboBuff from '../assets/special combo buff .jpg';
+
+// Thakali / Main
+import imgThakaliVeg from '../assets/Thakali Veg..jpg';
+import imgMushroomThakali from '../assets/mushroom thakali.jpg';
+import imgThakaliChickenCurry from '../assets/Thakali Chicken Curry Fried  Chilli.jpg';
+import imgChickenThaliSet from '../assets/chicken thali set.jpg';
+import imgThakaliBuffSukutiFry from '../assets/Thakali Buff Sukuti Fry.jpg';
+import imgMuttonThakali from '../assets/mutoon thakali.jpg';
+import imgThakaliBhuttanMutton from '../assets/Thakali Bhuttan (Mutton).jpg';
+import imgMuttonPaku from '../assets/mutton paku.png';
+import imgPakuChili from '../assets/paku chili new 30 aed price.png';
+
+// Momos & Thukpa
+import imgSteamMomo from '../assets/steam momo.png';
+import imgFryMomo from '../assets/fry momo.png';
+import imgJholMomo from '../assets/jhol momo.png';
+import imgChilliMomo from '../assets/chili momo.png';
+import imgTeelJholMomo from '../assets/teel jhol momo.jpg';
+import imgMomoPlatter from '../assets/momo plater.png';
+import imgThukpa from '../assets/thupa.png';
+import imgThukpaMomo from '../assets/thupa momo.png';
+
+// Indian Cuisine
 import imgButterChicken from '../assets/Butter Chicken.jpg';
 import imgChickenKadai from '../assets/Chicken Kadai.jpg';
 import imgChickenMasala from '../assets/Chicken Masala.jpg';
 import imgChickenManchurian from '../assets/Chicken Manchurian.jpg';
 import imgChickenRoast from '../assets/Chicken Roast.jpg';
-import imgMuttonKadai from '../assets/Mutton Kadai.jpg';
+import imgMuttonKadai from '../assets/mutton kadai .png';
+import imgDalMakhni from '../assets/dal makhni.png';
+import imgPaneerTikka from '../assets/paneer tika.png';
+import imgTandooriChickenFull from '../assets/tandori chicken. fullpng.png';
+import imgTandooriChickenHalf from '../assets/tandori chicken half.png';
 
-import imgBlackTea from '../assets/Black Tea.avif';
+// Biryani / Rice / Chowmein
+import imgVegBiryani from '../assets/veg biryani .jpg';
 import imgChickenBiryani from '../assets/Chicken Biryani.jpg';
+import imgMuttonBiryani from '../assets/Mutton Biryani.jpg';
+import imgVegFriedRice from '../assets/veg fry rice.jpg';
+import imgEggFriedRice from '../assets/egg fry rice.jpg';
+import imgChickenFriedRice from '../assets/chicken fry rice .jpg';
+import imgTripleSchezwanRice from '../assets/Triple Schezwan Rice.webp';
+import imgVegChowmein from '../assets/veg chowmin.png';
+import imgChickenChowmein from '../assets/chicken chowmin all .png';
+import imgPlainRice from '../assets/Plain Rice.jpg';
+import imgJeeraRice from '../assets/Jeera Rice.jpg';
+import imgGheeRice from '../assets/Ghee Rice.jpg';
+
+// Drinks
+import imgWater from '../assets/water.jpg';
+import imgSoftDrinks from '../assets/Softs Drinks.jpg';
+import imgBlackTea from '../assets/Black Tea.avif';
+import imgTeaMilk from '../assets/Tea milk.jpg';
+import imgGreenTea from '../assets/Green Tea.jpg';
+import imgFreshMilkTea from '../assets/Fresh Milk Tea.jpeg';
 import imgCoffeeBlack from '../assets/Coffee Black.jpg';
 import imgCoffeeMilk from '../assets/Coffee Milk.jpg';
-import imgEggFriedRice from '../assets/Egg Fried Rice.jpg';
-import imgFreshMilkTea from '../assets/Fresh Milk Tea.jpeg';
-import imgFriedRiceSchezwan from '../assets/Fried Rice -Schezawn.jpg';
-import imgFriedRiceSchezwanChicken from '../assets/Fried Rice -schexwan Chicken.jpg';
-import imgGheeRice from '../assets/Ghee Rice.jpg';
-import imgGreenTea from '../assets/Green Tea.jpg';
 import imgHotLemon from '../assets/Hot lemon.jpg';
-import imgJeeraRice from '../assets/Jeera Rice.jpg';
-import imgMuttonBiryani from '../assets/Mutton Biryani.jpg';
-import imgMuttonThaliSet from '../assets/Mutton Thali set.jpg';
-import imgPlainRice from '../assets/Plain Rice.jpg';
-import imgSoftDrinks from '../assets/Softs Drinks.jpg';
-import imgTeaMilk from '../assets/Tea milk.jpg';
-import imgThakaliBhuttanMutton from '../assets/Thakali Bhuttan (Mutton).jpg';
-import imgThakaliBuffSukutiFry from '../assets/Thakali Buff Sukuti Fry.jpg';
-import imgThakaliMuttonCurry from '../assets/Thakali Mutton Curry.jpg';
-import imgThakaliMuttonPakku from '../assets/Thakali Mutton Pakku.jpg';
-import imgTripleSchezwanRice from '../assets/Triple Schezwan Rice.webp';
-import imgVegBiryani from '../assets/Veg Biryani.jpg';
-import imgVegFriedRice from '../assets/Veg Fried Rice.webp';
-import imgChickenThaliSet from '../assets/chicken thali set.jpg';
-import imgWater from '../assets/water.jpg';
 
-import imgChatpate from '../assets/chatpate.jpg.jpeg';
-import imgChickenChoila from '../assets/chicken choila.jpg.jpeg';
-import imgJumboCombo from '../assets/jumbo combo.jpg.jpeg';
-import imgSpecialCombo from '../assets/special combo.jpg.jpeg';
-import imgSpecialComboBuff from '../assets/special combo buff .jpg.jpeg';
-import imgBuffSukuti from '../assets/buff sukuti.jpg.jpeg';
-import imgSpecialKhajaSet from '../assets/Special Khaja set.jpg.jpeg';
-import imgJholMomo from '../assets/jhol momo.jpg.jpeg';
-import imgTeelJholMomo from '../assets/teel jhol momo.jpg.jpeg';
-import imgMuttonThakali from '../assets/mutoon thakali.jpg.jpeg';
-import imgThakaliVeg from '../assets/Thakali Veg..jpg';
-import imgThakaliMushroom from '../assets/Thakali Mushroom.jpg';
-import imgThakaliChickenCurryFriedChilli from '../assets/Thakali Chicken Curry Fried  Chilli.jpg';
+
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
@@ -88,6 +111,8 @@ const menuData = [
     category: 'Breakfast',
     items: [
       { name: 'Roti / Chapati', price: '2 Dhs.', img: imgRoti },
+      { name: 'Roti Set (2 pcs. Roti And Tarkari)', price: '10 Dhs.', img: imgRotiSet },
+      { name: 'Puri Tarkari', price: '10 Dhs.', img: imgPuriTarkari },
       { name: 'Egg Roll (Per Pcs)', price: '6 Dhs.', img: imgEggRoll },
       { name: 'Plain Omlette (Small)', price: '3 Dhs.', img: imgPlainOmlette },
       { name: 'Plain Omlette (Large)', price: '6 Dhs.', img: imgPlainOmlette },
@@ -96,92 +121,98 @@ const menuData = [
       { name: 'Paratha (Plain)', price: '2 Dhs.', img: imgParathaPlain },
       { name: 'Paratha (Aloo)', price: '7 Dhs.', img: imgParathaAloo },
       { name: 'Chicken Roll Paratha (Per Pcs)', price: '7 Dhs.', img: imgChickenRollParatha },
-      { name: 'Egg Bhurji (Small)', price: '4 Dhs.', img: imgEggBhurji },
-      { name: 'Egg Bhurji (Large)', price: '7 Dhs.', img: imgEggBhurji },
+      { name: 'Egg Bhurji (Small)', price: '4 Dhs.', img: imgAndaBhurji },
+      { name: 'Egg Bhurji (Large)', price: '7 Dhs.', img: imgAndaBhurji },
       { name: 'Egg Poach (Small)', price: '3 Dhs.', img: imgEggPoach },
       { name: 'Egg Poach (Large)', price: '6 Dhs.', img: imgEggPoach },
-      { name: 'Selroti Set (2 pcs. Roti And Tarkari)', price: '10 Dhs.', img: imgSelroti },
+      { name: 'Selroti Set (2 pcs. Selroti And Tarkari)', price: '10 Dhs.', img: imgSelroti },
     ],
   },
   {
     category: 'Taas Set',
     items: [
-      { name: 'Chicken Taas Set', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Mutton Taas Set', price: '27 Dhs.', img: 'https://images.unsplash.com/photo-1574653853027-5382a3d23a15?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chicken Taas Set', price: '24 Dhs.', img: imgChickenChoila },
+      { name: 'Mutton Taas Set', price: '27 Dhs.', img: imgMuttonPaku },
     ],
   },
   {
     category: 'Chewra Set',
     items: [
-      { name: 'Chewra Veg. Set', price: '14 Dhs.', img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Chicken Set', price: '16 Dhs.', img: 'https://images.unsplash.com/photo-1606471191009-63994c53433b?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Buff Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Mutton Curry Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1574653853027-5382a3d23a15?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Pakku Set', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chewra Bhutan Set', price: '18 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Chewra Veg. Set', price: '14 Dhs.', img: imgThakaliVeg },
+      { name: 'Chewra Chicken Set', price: '16 Dhs.', img: imgChickenChoila },
+      { name: 'Chewra Buff Set', price: '18 Dhs.', img: imgBuffSukuti },
+      { name: 'Chewra Mutton Curry Set', price: '18 Dhs.', img: imgMuttonThakali },
+      { name: 'Chewra Pakku Set', price: '22 Dhs.', img: imgMuttonPaku },
+      { name: 'Chewra Bhutan Set', price: '18 Dhs.', img: imgThakaliBhuttanMutton },
     ],
   },
   {
     category: 'Khaja Set',
     items: [
-      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgThakaliMushroom },
+      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgMushroomThakali },
       { name: 'Khaja Set Chicken', price: '22 Dhs.', img: imgChickenChoila },
       { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: imgBuffSukuti },
       { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: imgThakaliBhuttanMutton },
-      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgThakaliMuttonPakku },
+      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgMuttonPaku },
       { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: imgSpecialKhajaSet },
     ],
   },
   {
     category: 'Sekuwa Set',
     items: [
-      { name: 'Sekuwa Set Chicken', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1601050690597-df05688ace79?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Sekuwa Set Mutton', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1574653853027-5382a3d23a15?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Sekuwa Set Chicken', price: '22 Dhs.', img: imgChickenMuttonSekwaCombo },
+      { name: 'Sekuwa Set Mutton', price: '25 Dhs.', img: imgChickenMuttonSekwaCombo },
     ],
   },
   {
     category: 'Special Khata',
     items: [
-      { name: 'Veg.', price: '26 Dhs.', img: 'https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Chicken', price: '28 Dhs.', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Buff', price: '29 Dhs.', img: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Veg. Khata', price: '26 Dhs.', img: imgThakaliVeg },
+      { name: 'Chicken Khata', price: '28 Dhs.', img: imgChickenThaliSet },
+      { name: 'Buff Khata', price: '29 Dhs.', img: imgThakaliBuffSukutiFry },
     ],
   },
   {
     category: 'Thakali Set',
     items: [
       { name: 'Thakali Veg.', price: '20 Dhs.', img: imgThakaliVeg },
-      { name: 'Thakali Mushroom', price: '23 Dhs.', img: imgThakaliMushroom },
-      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: '22 Dhs.', img: imgThakaliChickenCurryFriedChilli },
+      { name: 'Thakali Mushroom', price: '23 Dhs.', img: imgMushroomThakali },
+      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: '22 Dhs.', img: imgThakaliChickenCurry },
       { name: 'Thakali Local Chicken Curry', price: '25 Dhs.', img: imgChickenThaliSet },
       { name: 'Thakali Buff Sukuti Fry', price: '25 Dhs.', img: imgThakaliBuffSukutiFry },
       { name: 'Thakali Mutton Curry', price: '25 Dhs.', img: imgMuttonThakali },
       { name: 'Thakali Bhutan (Mutton)', price: '24 Dhs.', img: imgThakaliBhuttanMutton },
-      { name: 'Thakali Mutton Pakku', price: '29 Dhs.', img: imgThakaliMuttonPakku },
+      { name: 'Thakali Mutton Pakku', price: '29 Dhs.', img: imgMuttonPaku },
     ],
   },
   {
     category: 'Dhido Set',
     items: [
-      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1596797882870-8c33daeef494?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: 'https://images.unsplash.com/photo-1551881192-002e08a4f66a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae39f?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1574653853027-5382a3d23a15?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: imgThakaliVeg },
+      { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: imgMushroomThakali },
+      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: imgThakaliChickenCurry },
+      { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: imgChickenThaliSet },
+      { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: imgMuttonThakali },
+      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: imgMuttonPaku },
     ],
   },
   {
     category: 'Star Momo Special',
     items: [
-      { name: 'Laphing (Tibetan) - Dry', price: '15 Dhs.', img: imgLaphingDry },
-      { name: 'Laphing (Tibetan) - Jhol', price: '17 Dhs.', img: imgLaphingJhol },
-      { name: 'Star Momo Jhol Momo', price: '18 Dhs.', img: imgJholMomo },
+      { name: 'Steam Momo (10 pcs.)', price: '12 Dhs.', img: imgSteamMomo },
+      { name: 'Fry Momo (10 pcs.)', price: '15 Dhs.', img: imgFryMomo },
+      { name: 'Jhol Momo (10 pcs.)', price: '18 Dhs.', img: imgJholMomo },
+      { name: 'Chilli Momo (10 pcs.)', price: '18 Dhs.', img: imgChilliMomo },
       { name: 'Teel Jhol Momo', price: '20 Dhs.', img: imgTeelJholMomo },
+      { name: 'Laphing (Tibetan) - Dry', price: '15 Dhs.', img: imgLaphing },
+      { name: 'Laphing (Tibetan) - Jhol', price: '17 Dhs.', img: imgLaphing },
+      { name: 'Thukpa (Veg / Chicken / Buff)', price: '15 Dhs.', img: imgThukpa },
+      { name: 'Thukpa Momo', price: '20 Dhs.', img: imgThukpaMomo },
       { name: 'Chatpate', price: '12 Dhs.', img: imgChatpate },
-      { name: 'Star Momo Platter', price: '25 Dhs.', img: imgStarMomoPlatter },
-      { name: 'Wings Platter', price: '17 Dhs.', img: imgWingsPlatter },
+      { name: 'Panipuri', price: '12 Dhs.', img: imgPanipuri },
+      { name: 'Star Momo Platter', price: '25 Dhs.', img: imgMomoPlatter },
       { name: 'Jumbo Combo', price: '45 Dhs.', img: imgJumboCombo },
+      { name: 'Momo Chowmein Combo', price: '25 Dhs.', img: imgMomoChowmeinCombo },
       { name: 'Special Combo (Chicken)', price: '35 Dhs.', img: imgSpecialCombo },
       { name: 'Special Combo (Buff)', price: '38 Dhs.', img: imgSpecialComboBuff },
     ],
@@ -195,26 +226,28 @@ const menuData = [
       { name: 'Chicken Manchurian', price: '20 Dhs.', img: imgChickenManchurian },
       { name: 'Chicken Roast', price: '20 Dhs.', img: imgChickenRoast },
       { name: 'Mutton Kadai', price: '24 Dhs.', img: imgMuttonKadai },
+      { name: 'Dal Makhni', price: '18 Dhs.', img: imgDalMakhni },
+      { name: 'Paneer Tikka', price: '22 Dhs.', img: imgPaneerTikka },
+      { name: 'Tandoori Chicken (Full)', price: '38 Dhs.', img: imgTandooriChickenFull },
+      { name: 'Tandoori Chicken (Half)', price: '20 Dhs.', img: imgTandooriChickenHalf },
     ],
   },
   {
-    category: 'Biryani / Fried Rice',
+    category: 'Biryani / Fried Rice / Noodles',
     items: [
       { name: 'Veg. Biryani', price: '15 Dhs.', img: imgVegBiryani },
       { name: 'Chicken Biryani', price: '15 Dhs.', img: imgChickenBiryani },
       { name: 'Mutton Biryani', price: '20 Dhs.', img: imgMuttonBiryani },
       { name: 'Veg. Fried Rice', price: '15 Dhs.', img: imgVegFriedRice },
       { name: 'Egg Fried Rice', price: '17 Dhs.', img: imgEggFriedRice },
-      { name: 'Chicken Fried Rice', price: '17 Dhs.', img: 'https://images.unsplash.com/photo-1645696301019-35adaf863d8a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Buff', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Mixed', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Schezwan (Chicken)', price: '20 Dhs.', img: imgFriedRiceSchezwanChicken },
-      { name: 'Fried Rice - Schezwan (Buff)', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Fried Rice - Schezwan (Veg.)', price: '20 Dhs.', img: imgFriedRiceSchezwan },
+      { name: 'Chicken Fried Rice', price: '17 Dhs.', img: imgChickenFriedRice },
+      { name: 'Veg. Chowmein', price: '15 Dhs.', img: imgVegChowmein },
+      { name: 'Chicken Chowmein', price: '17 Dhs.', img: imgChickenChowmein },
+      { name: 'Mixed Chowmein', price: '20 Dhs.', img: imgChickenChowmein },
+      { name: 'Triple Schezwan Fried Rice', price: '25 Dhs.', img: imgTripleSchezwanRice },
       { name: 'Plain Rice', price: '5 Dhs.', img: imgPlainRice },
       { name: 'Jeera Rice', price: '10 Dhs.', img: imgJeeraRice },
       { name: 'Ghee Rice', price: '10 Dhs.', img: imgGheeRice },
-      { name: 'Triple Schezwan Fried Rice', price: '25 Dhs.', img: imgTripleSchezwanRice },
     ],
   },
   {
