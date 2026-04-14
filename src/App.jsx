@@ -294,6 +294,17 @@ function App() {
                       HOUSE RESTAURANT
                     </motion.span>
                   </h1>
+
+                  {/* Mobile Featured Image: visible only between title and description on small screens */}
+                  <motion.div 
+                    className="hero-featured-image mobile-only"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.9, duration: 0.5 }}
+                  >
+                    <img src={featuredImg} alt="Star Momo Signature Dish" />
+                  </motion.div>
+
                   <motion.p
                     className="hero-description"
                     style={{ color: 'rgba(255,255,255,0.92)', fontSize: '18px', maxWidth: '600px', margin: '20px 0 40px' }}
@@ -318,8 +329,9 @@ function App() {
                     </motion.div>
                 </motion.div>
 
+                {/* Desktop Featured Image: hidden on mobile */}
                 <motion.div
-                  className="hero-featured-image"
+                  className="hero-featured-image desktop-only"
                   initial={{ opacity: 0, x: 70, scale: 0.88, rotate: 2 }}
                   animate={{
                     opacity: 1,

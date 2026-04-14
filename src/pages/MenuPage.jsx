@@ -65,6 +65,20 @@ import imgVegFriedRice from '../assets/Veg Fried Rice.webp';
 import imgChickenThaliSet from '../assets/chicken thali set.jpg';
 import imgWater from '../assets/water.jpg';
 
+import imgChatpate from '../assets/chatpate.jpg.jpeg';
+import imgChickenChoila from '../assets/chicken choila.jpg.jpeg';
+import imgJumboCombo from '../assets/jumbo combo.jpg.jpeg';
+import imgSpecialCombo from '../assets/special combo.jpg.jpeg';
+import imgSpecialComboBuff from '../assets/special combo buff .jpg.jpeg';
+import imgBuffSukuti from '../assets/buff sukuti.jpg.jpeg';
+import imgSpecialKhajaSet from '../assets/Special Khaja set.jpg.jpeg';
+import imgJholMomo from '../assets/jhol momo.jpg.jpeg';
+import imgTeelJholMomo from '../assets/teel jhol momo.jpg.jpeg';
+import imgMuttonThakali from '../assets/mutoon thakali.jpg.jpeg';
+import imgThakaliVeg from '../assets/Thakali Veg..jpg';
+import imgThakaliMushroom from '../assets/Thakali Mushroom.jpg';
+import imgThakaliChickenCurryFriedChilli from '../assets/Thakali Chicken Curry Fried  Chilli.jpg';
+
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
 
@@ -110,12 +124,12 @@ const menuData = [
   {
     category: 'Khaja Set',
     items: [
-      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1551881192-002e08a4f66a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Chicken', price: '22 Dhs.', img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgThakaliMushroom },
+      { name: 'Khaja Set Chicken', price: '22 Dhs.', img: imgChickenChoila },
+      { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: imgBuffSukuti },
+      { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: imgThakaliBhuttanMutton },
+      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgThakaliMuttonPakku },
+      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: imgSpecialKhajaSet },
     ],
   },
   {
@@ -136,12 +150,12 @@ const menuData = [
   {
     category: 'Thakali Set',
     items: [
-      { name: 'Thakali Veg.', price: '20 Dhs.', img: 'https://images.unsplash.com/photo-1596797882870-8c33daeef494?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Mushroom', price: '23 Dhs.', img: 'https://images.unsplash.com/photo-1551881192-002e08a4f66a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: '22 Dhs.', img: imgChickenThaliSet },
-      { name: 'Thakali Local Chicken Curry', price: '25 Dhs.', img: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae39f?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Thakali Veg.', price: '20 Dhs.', img: imgThakaliVeg },
+      { name: 'Thakali Mushroom', price: '23 Dhs.', img: imgThakaliMushroom },
+      { name: 'Thakali Chicken (Curry / Fried / Chilli)', price: '22 Dhs.', img: imgThakaliChickenCurryFriedChilli },
+      { name: 'Thakali Local Chicken Curry', price: '25 Dhs.', img: imgChickenThaliSet },
       { name: 'Thakali Buff Sukuti Fry', price: '25 Dhs.', img: imgThakaliBuffSukutiFry },
-      { name: 'Thakali Mutton Curry', price: '25 Dhs.', img: imgThakaliMuttonCurry },
+      { name: 'Thakali Mutton Curry', price: '25 Dhs.', img: imgMuttonThakali },
       { name: 'Thakali Bhutan (Mutton)', price: '24 Dhs.', img: imgThakaliBhuttanMutton },
       { name: 'Thakali Mutton Pakku', price: '29 Dhs.', img: imgThakaliMuttonPakku },
     ],
@@ -162,9 +176,14 @@ const menuData = [
     items: [
       { name: 'Laphing (Tibetan) - Dry', price: '15 Dhs.', img: imgLaphingDry },
       { name: 'Laphing (Tibetan) - Jhol', price: '17 Dhs.', img: imgLaphingJhol },
-      { name: 'Spicy Platter', price: '30 Dhs.', img: 'https://images.unsplash.com/photo-1555126634-ae231a4a112f?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Star Momo Jhol Momo', price: '18 Dhs.', img: imgJholMomo },
+      { name: 'Teel Jhol Momo', price: '20 Dhs.', img: imgTeelJholMomo },
+      { name: 'Chatpate', price: '12 Dhs.', img: imgChatpate },
       { name: 'Star Momo Platter', price: '25 Dhs.', img: imgStarMomoPlatter },
       { name: 'Wings Platter', price: '17 Dhs.', img: imgWingsPlatter },
+      { name: 'Jumbo Combo', price: '45 Dhs.', img: imgJumboCombo },
+      { name: 'Special Combo (Chicken)', price: '35 Dhs.', img: imgSpecialCombo },
+      { name: 'Special Combo (Buff)', price: '38 Dhs.', img: imgSpecialComboBuff },
     ],
   },
   {
