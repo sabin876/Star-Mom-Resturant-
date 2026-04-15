@@ -598,38 +598,21 @@ const MenuPage = () => {
         @media (max-width: 768px) {
           .menu-categories {
             top: 60px;
-            gap: 8px;
-            padding: 12px 16px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            justify-content: flex-start;
+            gap: 12px 10px;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+            justify-content: center;
             border-radius: 0;
-            background: rgba(250, 247, 242, 0.97) !important;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(250, 247, 242, 0.98) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             margin-bottom: 24px;
             max-width: 100vw;
-            margin-left: -20px;
-            margin-right: -20px;
             border-bottom: 1px solid rgba(0,0,0,0.06);
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
           }
 
-          .menu-categories::-webkit-scrollbar {
-            display: none;
-          }
-
-          .menu-categories::after {
-            content: '';
-            flex: 0 0 16px;
-            display: block;
-          }
-
           .category-btn {
-            flex-shrink: 0;
             padding: 8px 16px;
             font-size: 13px;
             font-weight: 600;
