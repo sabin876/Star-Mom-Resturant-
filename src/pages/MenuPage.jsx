@@ -65,6 +65,11 @@ import imgPakuChili from '../assets/paku chili new 30 aed price.png';
 import imgThakaliMuttonPakkuNew from '../assets/Thakali Mutton Pakku.jpg';
 import imgMuttonThaliSetNew from '../assets/Mutton Thali set.jpg';
 
+// New specialized Dhido Set imports
+import imgDhidoVeg from '../assets/Thakali Dhido w Veg.jpg';
+import imgDhidoChicken from '../assets/Thakali Dhido w Chicken (Curry Fried).webp';
+import imgDhidoMuttonPakku from '../assets/Thakali Dhido w Mutton Pakku.jpg';
+
 // Momos & Thukpa
 import imgSteamMomo from '../assets/steam momo.png';
 import imgFryMomo from '../assets/fry momo.png';
@@ -201,12 +206,12 @@ const menuData = [
   {
     category: 'Dhido Set',
     items: [
-      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: imgThakaliVeg },
+      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: imgDhidoVeg },
       { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: imgMushroomThakali },
-      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: imgThakaliChickenCurry },
+      { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: imgDhidoChicken },
       { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: imgChickenThaliSet },
       { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: imgMuttonThaliSetNew },
-      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: imgThakaliMuttonPakkuNew },
+      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: imgDhidoMuttonPakku },
     ],
   },
   {
