@@ -81,14 +81,14 @@ const assetModules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp,svg}', {
 });
 
 const logoImg = assetModules['/src/assets/logo.png'];
-const contentBg = assetModules['/src/assets/contnet Bg.jpeg'];
+const contentBg = assetModules['/src/assets/content-bg.jpeg'];
 const heroImages = [
   assetModules['/src/assets/hero section.webp'],
   assetModules['/src/assets/Hero section 2.webp'],
 ];
 
 const featuredImg = assetModules['/src/assets/DSC_0806(1).png'];
-const historyBg = assetModules['/src/assets/Our History.jpeg'];
+const historyBg = assetModules['/src/assets/jhol momo.png'];
 
 function App() {
   const routePath =
