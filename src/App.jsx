@@ -321,7 +321,7 @@ function App() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.15, duration: 0.5 }}
                     >
-                      <motion.a href="#menu" className="btn btn-primary" whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.97 }}>
+                      <motion.a href="/menu" className="btn btn-primary" whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.97 }}>
                         Discover Menu
                       </motion.a>
                       <motion.a href="tel:+97143312767" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.12)' }} whileTap={{ scale: 0.97 }}>
