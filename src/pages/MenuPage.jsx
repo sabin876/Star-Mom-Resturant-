@@ -182,14 +182,7 @@ const menuData = [
       { name: 'Sekuwa Set Mutton', price: '25 Dhs.', img: imgSekuwaSetMutton },
     ],
   },
-  {
-    category: 'Special Khata',
-    items: [
-      { name: 'Veg. Khata', price: '26 Dhs.', img: imgThakaliVeg },
-      { name: 'Chicken Khata', price: '28 Dhs.', img: imgChickenThaliSet },
-      { name: 'Buff Khata', price: '29 Dhs.', img: imgThakaliBuffSukutiFry },
-    ],
-  },
+
   {
     category: 'Thakali Set',
     items: [
@@ -291,7 +284,6 @@ const categoryIcons = {
   'Chewra Set': <Wheat size={18} />,
   'Khaja Set': <ChefHat size={18} />,
   'Sekuwa Set': <Beef size={18} />,
-  'Special Khata': <Sparkles size={18} />,
   'Thakali Set': <Utensils size={18} />,
   'Dhido Set': <Mountain size={18} />,
   'Star Momo Special': <Star size={18} />,
