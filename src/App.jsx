@@ -18,6 +18,7 @@ import './App.css';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import GoogleReviews from './components/GoogleReviews';
+import TeamSection from './components/TeamSection';
 import MenuPage from './pages/MenuPage';
 
 
@@ -475,6 +476,9 @@ function App() {
               </motion.div>
             </div>
           </section>
+
+          {/* Team Section */}
+          <TeamSection />
 
           {/* Google Reviews Section */}
           <GoogleReviews />
