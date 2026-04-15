@@ -88,7 +88,7 @@ const heroImages = [
 ];
 
 const featuredImg = assetModules['/src/assets/DSC_0806(1).png'];
-const historyBg = assetModules['/src/assets/jhol momo.png'];
+const historyBg = assetModules['/src/assets/our-history.jpeg'];
 
 function App() {
   const routePath =
@@ -618,7 +618,7 @@ function App() {
                 padding: '50px',
                 position: 'relative',
                 boxShadow: 'var(--shadow-lg)',
-                border: '1px solid rgba(255,255,255,0.1)'
+                border: '1px solid rgba(26, 93, 26, 0.1)'
               }}
             >
               <button 
@@ -629,7 +629,7 @@ function App() {
                   right: '20px',
                   background: 'none',
                   border: 'none',
-                  color: 'white',
+                  color: 'var(--primary)',
                   cursor: 'pointer'
                 }}
               >
@@ -638,9 +638,9 @@ function App() {
               
               <div className="story-content">
                 <span style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>The Legend of Star Momo</span>
-                <h2 style={{ fontSize: '36px', margin: '15px 0 30px', color: 'var(--secondary)' }}>A Journey from the Himalayas to Dubai</h2>
+                <h2 style={{ fontSize: '36px', margin: '15px 0 30px', color: 'var(--primary)' }}>A Journey from the Himalayas to Dubai</h2>
                 
-                <div style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.8', fontSize: '17px' }}>
+                <div style={{ color: 'var(--text-main)', opacity: 0.9, lineHeight: '1.8', fontSize: '17px' }}>
                   <p style={{ marginBottom: '20px' }}>
                     Every bowl of momo at Star Momo House carries the whispers of the mountain winds and the warmth of a Kathmandu hearth. Our story began decades ago in a small, hidden alley of Nepal, where our founder's grandmother would spend her mornings precisely hand-folding hundreds of dumplings for the community.
                   </p>
@@ -650,7 +650,7 @@ function App() {
                     paddingLeft: '20px', 
                     margin: '30px 0', 
                     fontStyle: 'italic',
-                    color: 'white',
+                    color: 'var(--primary)',
                     fontSize: '20px'
                   }}>
                     "Food is not just ingredients; it's a memory of home, a gift of love, and a bridge between worlds."
@@ -672,7 +672,7 @@ function App() {
                 <div style={{ marginTop: '40px', display: 'flex', gap: '20px', alignItems: 'center' }}>
                   <img src={logoImg} alt="Star Momo" style={{ height: '60px' }} />
                   <div>
-                    <h4 style={{ color: 'white', marginBottom: '2px' }}>Star Momo House</h4>
+                    <h4 style={{ color: 'var(--primary)', marginBottom: '2px' }}>Star Momo House</h4>
                     <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>Est. 2008 in Spirit, 2024 in Dubai</p>
                   </div>
                 </div>
