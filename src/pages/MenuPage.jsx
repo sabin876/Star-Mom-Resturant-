@@ -46,7 +46,6 @@ import imgLaphingDry from '../assets/Laphing (Tibetan) - Dry.jpg';
 import imgLaphingJhol from '../assets/Laphing (Tibetan) - Jhol.jpg';
 import imgSekuwaSetChicken from '../assets/Sekuwa Set Chicken.jpg';
 import imgSekuwaSetMutton from '../assets/Sekuwa Set Mutton.jpg';
-import imgChickenMuttonSekwaCombo from '../assets/chicken mutton sekwa combo .png';
 import imgMomoChowmeinCombo from '../assets/momo chowmein combo.jpg';
 import imgJumboCombo from '../assets/jumbo combo.jpg';
 import imgSpecialCombo from '../assets/special combo.jpg';
@@ -58,10 +57,7 @@ import imgMushroomThakali from '../assets/mushroom thakali.jpg';
 import imgThakaliChickenCurry from '../assets/Thakali Chicken Curry Fried  Chilli.jpg';
 import imgChickenThaliSet from '../assets/chicken thali set.jpg';
 import imgThakaliBuffSukutiFry from '../assets/Thakali Buff Sukuti Fry.jpg';
-import imgMuttonThakali from '../assets/mutoon thakali.jpg';
 import imgThakaliBhuttanMutton from '../assets/Thakali Bhuttan (Mutton).jpg';
-import imgMuttonPaku from '../assets/mutton paku.png';
-import imgPakuChili from '../assets/paku chili new 30 aed price.png';
 import imgThakaliMuttonPakkuNew from '../assets/Thakali Mutton Pakku.jpg';
 import imgMuttonThaliSetNew from '../assets/Mutton Thali set.jpg';
 
@@ -76,7 +72,6 @@ import imgFryMomo from '../assets/fry momo.png';
 import imgJholMomo from '../assets/jhol momo.png';
 import imgChilliMomo from '../assets/chili momo.png';
 import imgTeelJholMomo from '../assets/teel jhol momo.jpg';
-import imgMomoPlatter from '../assets/momo plater.png';
 import imgStarMomoPlatterNew from '../assets/Star Momo Platter.jpg';
 import imgThukpa from '../assets/thupa.png';
 import imgThukpaMomo from '../assets/thupa momo.png';
@@ -122,6 +117,7 @@ import imgHotLemon from '../assets/Hot lemon.jpg';
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
+void AnimatePresence;
 
 // Authentic realistic placeholder images mapped to each item
 const menuData = [
@@ -288,7 +284,7 @@ const categoryIcons = {
   'Dhido Set': <Mountain size={18} />,
   'Star Momo Special': <Star size={18} />,
   'Indian Cuisine': <UtensilsCrossed size={18} />,
-  'Biryani / Fried Rice': <Soup size={18} />,
+  'Biryani / Fried Rice / Noodles': <Soup size={18} />,
   'Drinks': <GlassWater size={18} />,
 };
 
@@ -670,13 +666,13 @@ const MenuPage = () => {
           }
 
           .menu-page-grid-container h2 {
-            color: snow !important;
+            color: var(--primary) !important;
           }
 
           .menu-item-info h3 {
             font-size: 15px;
             line-height: 1.3;
-            color: snow !important;
+            color: var(--primary) !important;
           }
 
 

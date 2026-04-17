@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote, ExternalLink } from 'lucide-react';
 
+// ESLint workaround
+void motion;
+
 const reviews = [
   {
     id: 1,

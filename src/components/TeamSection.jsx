@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Twitter, ChefHat } from 'lucide-react';
 
+// ESLint workaround
+void motion;
+
 // Team images from assets
 import team1 from '../assets/team 1.jpeg';
 import team2 from '../assets/team 2.jpeg';
