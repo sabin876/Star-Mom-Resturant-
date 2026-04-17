@@ -109,7 +109,8 @@ import imgJeeraRice from '../assets/Jeera Rice.jpg';
 import imgGheeRice from '../assets/Ghee Rice.jpg';
 
 // Drinks
-import imgWater from '../assets/water.jpg';
+import imgWaterSmall from '../assets/water Small.jpg';
+import imgWaterBig from '../assets/water big.webp';
 import imgSoftDrinks from '../assets/Softs Drinks.jpg';
 import imgBlackTea from '../assets/Black Tea.avif';
 import imgTeaMilk from '../assets/Tea milk.jpg';
@@ -269,8 +270,8 @@ const menuData = [
   {
     category: 'Drinks',
     items: [
-      { name: 'Water (Small)', price: '1 Dhs.', img: imgWater },
-      { name: 'Water (Large)', price: '2 Dhs.', img: imgWater },
+      { name: 'Water (Small)', price: '1 Dhs.', img: imgWaterSmall },
+      { name: 'Water (Large)', price: '2 Dhs.', img: imgWaterBig },
       { name: 'Soft Drinks', price: '3 Dhs.', img: imgSoftDrinks },
       { name: 'Tea (Black)', price: '1 Dhs.', img: imgBlackTea },
       { name: 'Tea (Milk)', price: '2 Dhs.', img: imgTeaMilk },
