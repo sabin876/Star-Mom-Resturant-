@@ -115,8 +115,8 @@ import imgJeeraRice from '../assets/Jeera Rice.jpg';
 import imgGheeRice from '../assets/Ghee Rice.jpg';
 
 // Drinks
-import imgWaterSmall from '../assets/water Small.jpg';
-import imgWaterBig from '../assets/water big.webp';
+import imgWaterSmall from '../assets/water.jpg';
+import imgWaterBig from '../assets/water.jpg';
 import imgSoftDrinks from '../assets/Softs Drinks.jpg';
 import imgBlackTea from '../assets/Black Tea.avif';
 import imgTeaMilk from '../assets/Tea milk.jpg';
