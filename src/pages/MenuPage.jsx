@@ -128,6 +128,7 @@ import imgHotLemon from '../assets/Hot lemon.jpg';
 
 
 
+
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
 void AnimatePresence;
