@@ -16,10 +16,10 @@ import {
   UtensilsCrossed
 } from 'lucide-react';
 
-import imgRoti from '../assets/Roti.jpg';
+import imgRoti from '../assets/roti.png';
 import imgRotiSet from '../assets/roti set.png';
 import imgPuriTarkari from '../assets/puri tarkari.png';
-import imgEggRoll from '../assets/Egg Roll.jpg';
+import imgEggRoll from '../assets/roll.png';
 import imgEggPoach from '../assets/Egg Poach.webp';
 import imgPlainOmlette from '../assets/Plian Omlette.jpg';
 import imgMasalaOmlette from '../assets/MasalaOmlette.jpg';
@@ -44,7 +44,7 @@ import imgBuffSukuti from '../assets/buff sukuti.jpg';
 import imgSpecialKhajaSet from '../assets/Special Khaja set.jpg';
 import imgChatpate from '../assets/chatpate.jpg';
 import imgPanipuri from '../assets/panipuri.png';
-import imgLaphingDry from '../assets/Laphing (Tibetan) - Dry.jpg';
+import imgLaphingDry from '../assets/laphing.png';
 import imgLaphingJhol from '../assets/Laphing (Tibetan) - Jhol.jpg';
 import imgSekuwaSetChicken from '../assets/Sekuwa Set Chicken.jpg';
 import imgSekuwaSetMutton from '../assets/Sekuwa Set Mutton.jpg';
@@ -52,6 +52,9 @@ import imgMomoChowmeinCombo from '../assets/momo chowmein combo.jpg';
 import imgJumboCombo from '../assets/jumbo combo.jpg';
 import imgSpecialCombo from '../assets/special combo.jpg';
 import imgSpecialComboBuff from '../assets/special combo buff .jpg';
+import imgKhajaMushroomPaneerChilli from '../assets/Khaja Set Mushroom  Paneer Chilli.webp';
+import imgKhajaPakku from '../assets/mutton paku.png';
+import imgSpecialKhajaPakku from '../assets/paku chili new 30 aed price.png';
 
 // Thakali / Main
 import imgThakaliVeg from '../assets/Thakali Veg..jpg';
@@ -63,13 +66,16 @@ import imgThakaliBhuttanMutton from '../assets/Thakali Bhuttan (Mutton).jpg';
 import imgThakaliMuttonPakkuNew from '../assets/Thakali Mutton Pakku.jpg';
 import imgMuttonThaliSetNew from '../assets/Mutton Thali set.jpg';
 import imgThakaliMushroomNew from '../assets/Thakali Mushroom.jpg';
-import imgThakaliMuttonCurryNew from '../assets/Thakali Mutton Curry.jpg';
+import imgThakaliMuttonCurryNew from '../assets/mutoon thakali.jpg';
 
 // New specialized Dhido Set imports
 import imgDhidoVeg from '../assets/Thakali Dhido w Veg.jpg';
 import imgDhidoChicken from '../assets/Thakali Dhido w Chicken (Curry Fried).webp';
 import imgDhidoMuttonPakku from '../assets/Thakali Dhido w Mutton Pakku.jpg';
 import imgDhidoMushroomNew from '../assets/Thakali Dhido Mushroom.jpg';
+import imgDhidoLocalChickenCurry from '../assets/Thakali Dhido  Local Chicken Curry.jpg';
+import imgDhidoMuttonCurry from '../assets/Thakali Dhido Mutton Curry.jpg';
+import imgDhidoMuttonPakkuNew from '../assets/Thakali Dhido Mutton Pakku.jpeg';
 
 // Momos & Thukpa
 import imgSteamMomo from '../assets/steam momo.png';
@@ -77,7 +83,7 @@ import imgFryMomo from '../assets/fry momo.png';
 import imgJholMomo from '../assets/jhol momo.png';
 import imgChilliMomo from '../assets/chili momo.png';
 import imgTeelJholMomo from '../assets/teel jhol momo.jpg';
-import imgStarMomoPlatterNew from '../assets/Star Momo Platter.jpg';
+import imgStarMomoPlatterNew from '../assets/momo plater.png';
 import imgThukpa from '../assets/thupa.png';
 import imgThukpaMomo from '../assets/thupa momo.png';
 import imgMushroomSoup from '../assets/mushroom shoup.png';
@@ -88,7 +94,7 @@ import imgChickenKadai from '../assets/Chicken Kadai.jpg';
 import imgChickenMasala from '../assets/Chicken Masala.jpg';
 import imgChickenManchurian from '../assets/Chicken Manchurian.jpg';
 import imgChickenRoast from '../assets/Chicken Roast.jpg';
-import imgMuttonKadai from '../assets/Mutton Kadai.jpg';
+import imgMuttonKadai from '../assets/mutton kadai .png';
 import imgDalMakhni from '../assets/dal makhni.png';
 import imgPaneerTikka from '../assets/paneer tika.png';
 import imgTandooriChickenFull from '../assets/tandori chicken. fullpng.png';
@@ -98,7 +104,7 @@ import imgTandooriChickenHalf from '../assets/tandori chicken half.png';
 import imgVegBiryani from '../assets/veg biryani .jpg';
 import imgChickenBiryani from '../assets/Chicken Biryani.jpg';
 import imgMuttonBiryani from '../assets/Mutton Biryani.jpg';
-import imgVegFriedRice from '../assets/Veg Fried Rice.webp';
+import imgVegFriedRice from '../assets/veg fry rice.jpg';
 import imgEggFriedRice from '../assets/egg fry rice.jpg';
 import imgChickenFriedRice from '../assets/chicken fry rice .jpg';
 import imgTripleSchezwanRice from '../assets/Triple Schezwan Rice.webp';
@@ -171,13 +177,13 @@ const menuData = [
   {
     category: 'Khaja Set',
     items: [
-      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgMushroomThakali },
+      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgKhajaMushroomPaneerChilli },
       { name: 'Khaja Set Chicken', price: '22 Dhs.', img: imgChickenChoila },
       { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: imgBuffSukuti },
       { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: imgThakaliBhuttanMutton },
-      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgThakaliMuttonPakkuNew },
+      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgKhajaPakku },
       { name: 'Wings Platter', price: '20 Dhs.', img: imgWingsPlatter },
-      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: imgSpecialKhajaSet },
+      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: imgSpecialKhajaPakku },
     ],
   },
   {
@@ -207,9 +213,9 @@ const menuData = [
       { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: imgDhidoVeg },
       { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: imgDhidoMushroomNew },
       { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: imgDhidoChicken },
-      { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: imgChickenThaliSet },
-      { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: imgMuttonThaliSetNew },
-      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: imgDhidoMuttonPakku },
+      { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: imgDhidoLocalChickenCurry },
+      { name: 'Thakali Dhido w/ Mutton Curry', price: '30 Dhs.', img: imgDhidoMuttonCurry },
+      { name: 'Thakali Dhido w/ Mutton Pakku', price: '30 Dhs.', img: imgDhidoMuttonPakkuNew },
     ],
   },
   {
