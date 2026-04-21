@@ -31,7 +31,7 @@ import imgChickenRollParatha from '../assets/Chicken Roll Paratha.jpg';
 import imgSelroti from '../assets/Selroti.jpg';
 
 // New imports for Chewra Set
-import imgChewraVegSet from '../assets/Chewra Veg Set.jpg';
+import imgChewraVegSet from '../assets/Chewra Veg. Set.webp';
 import imgChewraChickenSet from '../assets/Chewra Chicken Set.jpg';
 import imgChewraBuffSet from '../assets/Chewra bufff Set.jpg';
 import imgChewraPakkuSet from '../assets/Chewra Pakku Set.jpg';
