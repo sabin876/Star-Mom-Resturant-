@@ -51,7 +51,6 @@ import imgSekuwaSetMutton from '../assets/Sekuwa Set Mutton.jpg';
 import imgMomoChowmeinCombo from '../assets/momo chowmein combo.jpg';
 import imgJumboCombo from '../assets/jumbo combo.jpg';
 import imgSpecialCombo from '../assets/special combo.jpg';
-import imgSpecialComboBuff from '../assets/special combo buff .jpg';
 import imgKhajaMushroomPaneerChilli from '../assets/Khaja Set Mushroom  Paneer Chilli.webp';
 import imgKhajaPakku from '../assets/mutton paku.png';
 import imgSpecialKhajaPakku from '../assets/paku chili new 30 aed price.png';
@@ -237,8 +236,7 @@ const menuData = [
       { name: 'Star Momo Platter', price: '25 Dhs.', img: imgStarMomoPlatterNew },
       { name: 'Jumbo Combo', price: '45 Dhs.', img: imgJumboCombo },
       { name: 'Momo Chowmein Combo', price: '25 Dhs.', img: imgMomoChowmeinCombo },
-      { name: 'Special Combo (Chicken)', price: '35 Dhs.', img: imgSpecialCombo },
-      { name: 'Special Combo (Buff)', price: '38 Dhs.', img: imgSpecialComboBuff },
+      { name: 'Special Combo Veg./Chicken/Buff (MO:MO+Chowmein+Chhoila)', price: '24/26/28 Dhs.', img: imgSpecialCombo },
     ],
   },
   {
