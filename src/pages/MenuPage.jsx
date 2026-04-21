@@ -233,7 +233,7 @@ const menuData = [
       { name: 'Mushroom Soup', price: '12 Dhs.', img: imgMushroomSoup },
       { name: 'Chatpate', price: '12 Dhs.', img: imgChatpate },
       { name: 'Panipuri', price: '12 Dhs.', img: imgPanipuri },
-      { name: 'Star Momo Platter', price: '25 Dhs.', img: imgStarMomoPlatterNew },
+      { name: 'Star Momo Platter Veg/Chicken/Buff', price: '24/26/27 Dhs.', img: imgStarMomoPlatterNew },
       { name: 'Jumbo Combo Veg./Chicken/Buff (MO:MO+Chowmein+Chhoila +Bhutan + 2 Sausages+Egg)', price: '35 Dhs.', img: imgJumboCombo },
       { name: 'Momo Chowmein Combo', price: '25 Dhs.', img: imgMomoChowmeinCombo },
       { name: 'Special Combo Veg./Chicken/Buff (MO:MO+Chowmein+Chhoila)', price: '24/26/28 Dhs.', img: imgSpecialCombo },
