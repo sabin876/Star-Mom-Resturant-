@@ -68,7 +68,7 @@ import imgThakaliMushroomNew from '../assets/Thakali Mushroom.jpg';
 import imgThakaliMuttonCurryNew from '../assets/mutoon thakali.jpg';
 
 // New specialized Dhido Set imports
-import imgDhidoVeg from '../assets/DSC_0806(1).png';
+import imgDhidoVeg from '../assets/Thakali Dhido  Veg..jpg';
 import imgDhidoChicken from '../assets/Thakali Dhido w Chicken (Curry Fried).webp';
 import imgDhidoMuttonPakku from '../assets/Thakali Dhido w Mutton Pakku.jpg';
 import imgDhidoMushroomNew from '../assets/Thakali Dhido Mushroom.jpg';
@@ -210,7 +210,7 @@ const menuData = [
   {
     category: 'Dhido Set',
     items: [
-      { name: 'Thakali Dhido w/ Veg.', price: '22 Dhs.', img: imgDhidoVeg },
+      { name: 'Thakali Dhido w/Veg', price: '22 Dhs.', img: imgDhidoVeg },
       { name: 'Thakali Dhido w/ Mushroom', price: '24 Dhs.', img: imgDhidoMushroomNew },
       { name: 'Thakali Dhido w/ Chicken (Curry / Fried)', price: '26 Dhs.', img: imgDhidoChicken },
       { name: 'Thakali Dhido w/ Local Chicken Curry', price: '28 Dhs.', img: imgDhidoLocalChickenCurry },
