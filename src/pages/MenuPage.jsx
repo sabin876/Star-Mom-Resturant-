@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Utensils, 
-  MessageCircle, 
-  Coffee, 
-  Flame, 
-  ChefHat, 
-  Sparkles, 
-  Mountain, 
-  Star, 
-  Soup, 
-  GlassWater, 
-  Wheat, 
+import {
+  Utensils,
+  MessageCircle,
+  Coffee,
+  Flame,
+  ChefHat,
+  Sparkles,
+  Mountain,
+  Star,
+  Soup,
+  GlassWater,
+  Wheat,
   Beef,
   UtensilsCrossed
 } from 'lucide-react';
@@ -221,15 +221,14 @@ const menuData = [
   {
     category: 'Star Momo Special',
     items: [
-      { name: 'Steam Momo (10 pcs.)', price: '12 Dhs.', img: imgSteamMomo },
-      { name: 'Fry Momo (10 pcs.)', price: '15 Dhs.', img: imgFryMomo },
-      { name: 'Jhol Momo (10 pcs.)', price: '18 Dhs.', img: imgJholMomo },
+      { name: 'Steam Momo (10 Pcs) Veg/Chi./Buff', price: '16/17/18 Dhs.', img: imgSteamMomo },
+      { name: 'Fry Momo Veg/Chi./Buff', price: '17/19/20 Dhs.', img: imgFryMomo },
+      { name: 'Jhol Momo Veg/Chi/Buff', price: '18/20/22 Dhs.', img: imgJholMomo },
       { name: 'Chilli Momo (10 pcs.)', price: '18 Dhs.', img: imgChilliMomo },
-      { name: 'Teel Jhol Momo', price: '20 Dhs.', img: imgTeelJholMomo },
-      { name: 'Laphing (Tibetan) - Dry', price: '15 Dhs.', img: imgLaphingDry },
-      { name: 'Laphing (Tibetan) - Jhol', price: '17 Dhs.', img: imgLaphingJhol },
-      { name: 'Thukpa (Veg / Chicken / Buff)', price: '15 Dhs.', img: imgThukpa },
-      { name: 'Thukpa Momo', price: '20 Dhs.', img: imgThukpaMomo },
+      { name: 'Teel Jhol Momo Veg/Chi/Buff', price: '18/20/22 Dhs.', img: imgTeelJholMomo },
+      { name: 'Laphing (Tibetan) Dry/Jhol', price: '15/17 Dhs.', img: imgLaphingDry },
+      { name: 'Thukpa Veg/Chicken/Buff/Mix', price: '16/18/20/23 Dhs.', img: imgThukpa },
+      { name: 'Thukpa Momo Veg/Chi/Buff', price: '21/22/25 Dhs.', img: imgThukpaMomo },
       { name: 'Mushroom Soup', price: '12 Dhs.', img: imgMushroomSoup },
       { name: 'Chatpate', price: '12 Dhs.', img: imgChatpate },
       { name: 'Panipuri', price: '12 Dhs.', img: imgPanipuri },
