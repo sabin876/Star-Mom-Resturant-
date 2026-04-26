@@ -252,6 +252,15 @@ const menuData = [
     ],
   },
   {
+    category: 'Sadeko Item',
+    items: [
+      { name: 'Keema Noodles', price: '20/22 Dhs.', img: imgChickenChowmein },
+      { name: 'Aalu Nimiki', price: '15 Dhs.', img: imgAlooSaandekoNew },
+      { name: 'Chatpate Mo:mo', price: '15 Dhs.', img: imgChatpate },
+      { name: 'Sha-phaley Chicken/Buff', price: '17/19 Dhs.', img: imgChickenChoila },
+    ],
+  },
+  {
     category: 'Taas Set',
     items: [
       { name: 'Chicken Taas Set', price: '24 Dhs.', img: imgChickenTaas },
@@ -370,6 +379,7 @@ const categoryIcons = {
   'Thakali Set': <Utensils size={18} />,
   'Dhido Set': <Mountain size={18} />,
   'Star Momo Special': <Star size={18} />,
+  'Sadeko Item': <Sparkles size={18} />,
   'Indian Cuisine': <UtensilsCrossed size={18} />,
   'Biryani / Fried Rice / Noodles': <Soup size={18} />,
   'Drinks': <GlassWater size={18} />,
