@@ -267,8 +267,8 @@ function App() {
               <div className="hero-content-wrapper">
                 <motion.div
                   className="hero-text-content"
-                  initial={{ opacity: 0, x: -60 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.85, delay: 0.35, ease: easeOutExpo }}
                 >
                   <motion.span
@@ -299,19 +299,11 @@ function App() {
                     </motion.span>
                   </h1>
 
-                  {/* Mobile Featured Image: visible only between title and description on small screens */}
-                  <motion.div 
-                    className="hero-featured-image mobile-only"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.9, duration: 0.5 }}
-                  >
-                    <img src={featuredImg} alt="Star Momo Signature Dish" />
-                  </motion.div>
+
 
                   <motion.p
                     className="hero-description"
-                    style={{ color: 'rgba(255,255,255,0.92)', fontSize: '18px', maxWidth: '600px', margin: '20px 0 40px' }}
+                    style={{ color: 'rgba(255,255,255,0.92)', fontSize: '18px', maxWidth: 'min(100%, 600px)', margin: '20px 0 40px' }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.05, duration: 0.6 }}

@@ -419,6 +419,9 @@ ul {
 }
 
 .hero-badge {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
   display: inline-block;
   background: rgba(26, 93, 26, 0.8);
   padding: 8px 20px;
@@ -491,7 +494,7 @@ ul {
     text-align: center;
     justify-content: center;
     gap: 0;
-    overflow: hidden;
+
   }
 
   .hero-title-line {
@@ -507,7 +510,7 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow-x: hidden;
+
   }
 
   .hero-description {
