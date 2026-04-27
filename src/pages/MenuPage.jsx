@@ -69,7 +69,7 @@ import imgThakaliMushroomNew from '../assets/Thakali Mushroom.jpg';
 import imgThakaliMuttonCurryNew from '../assets/mutoon thakali.jpg';
 
 // New specialized Dhido Set imports
-import imgDhidoVeg from '../assets/DSC_0806(1).png';
+import imgDhidoVeg from '../assets/Thakali Dhido w Veg.jpg';
 import imgDhidoChicken from '../assets/Thakali Dhido w Chicken (Curry Fried).webp';
 import imgDhidoMuttonPakku from '../assets/Thakali Dhido w Mutton Pakku.jpg';
 import imgDhidoMushroomNew from '../assets/Thakali Dhido Mushroom.jpg';

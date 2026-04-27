@@ -82,7 +82,7 @@ const heroImages = [
 ];
 
 const featuredImg = assetModules['/src/assets/DSC_0806(1).png'];
-const historyBg = '/our-history.jpg';
+const historyBg = assetModules['/src/assets/history-bg.png'];
 
 function App() {
   const routePath =
