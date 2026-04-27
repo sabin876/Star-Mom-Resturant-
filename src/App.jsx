@@ -12,7 +12,14 @@ import {
   Flame,
   Star,
   Quote,
-  ExternalLink
+  ExternalLink,
+  ShieldCheck,
+  Heart,
+  History,
+  Leaf,
+  Users,
+  Award,
+  Mountain
 } from 'lucide-react';
 import './App.css';
 import GalleryPage from './pages/GalleryPage';
@@ -263,6 +270,14 @@ function App() {
               animate={{ opacity: [0.12, 0.2, 0.12] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             />
+            
+            {/* Decorative Mountain Outlines */}
+            <div style={{ position: 'absolute', bottom: '10%', right: '5%', opacity: 0.1, pointerEvents: 'none', zIndex: 1 }} className="desktop-only">
+              <Mountain size={400} color="white" strokeWidth={0.5} />
+            </div>
+            <div style={{ position: 'absolute', bottom: '5%', left: '2%', opacity: 0.05, pointerEvents: 'none', zIndex: 1 }} className="desktop-only">
+              <Mountain size={300} color="white" strokeWidth={0.5} />
+            </div>
             <div className="container">
               <div className="hero-content-wrapper">
                 <motion.div
@@ -423,11 +438,98 @@ function App() {
           </section>
 
 
-          {/* Services Section */}
-          <section id="services" className="pahuna-ghar-info" style={{
+          {/* Services & Values Section */}
+          <section id="services" className="section-padding" style={{ backgroundColor: 'var(--bg-main)', position: 'relative', overflow: 'hidden' }}>
+            {/* Subtle Background Pattern */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.03, pointerEvents: 'none', backgroundImage: 'url("https://www.transparenttextures.com/patterns/natural-paper.png")' }} />
+            
+            <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                <motion.span 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}
+                >
+                  Our Values
+                </motion.span>
+                <motion.h2 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  style={{ fontSize: '48px', margin: '15px 0' }}
+                >
+                  The Spirit of Star Momo
+                </motion.h2>
+                <motion.div 
+                  initial={{ width: 0 }}
+                  whileInView={{ width: '80px' }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                  style={{ height: '3px', background: 'var(--secondary)', margin: '0 auto' }} 
+                />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
+                {[
+                  {
+                    icon: <Leaf size={32} color="var(--primary)" />,
+                    title: "Authentic Spices",
+                    desc: "Every blend is sourced directly from the foothills of Nepal, ensuring the true soul of the Himalayas in every bite."
+                  },
+                  {
+                    icon: <Heart size={32} color="var(--primary)" />,
+                    title: "Hand-Folded with Love",
+                    desc: "Our chefs precisely hand-fold every single momo, a testament to our dedication to traditional craft."
+                  },
+                  {
+                    icon: <History size={32} color="var(--primary)" />,
+                    title: "Traditional Recipes",
+                    desc: "We use secret family recipes passed down through generations, keeping the heritage alive in Dubai."
+                  },
+                  {
+                    icon: <Users size={32} color="var(--primary)" />,
+                    title: "Himalayan Hospitality",
+                    desc: "Experience the warmth and care that defines Nepalese culture. You're not just a guest; you're family."
+                  }
+                ].map((feature, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, duration: 0.5 }}
+                    whileHover={{ y: -10 }}
+                    style={{
+                      padding: '40px',
+                      backgroundColor: 'white',
+                      borderRadius: '24px',
+                      boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                      textAlign: 'center',
+                      border: '1px solid rgba(26, 93, 26, 0.05)',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
+                    <div style={{ 
+                      width: '70px', height: '70px', borderRadius: '20px', backgroundColor: 'var(--bg-alt)', 
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 25px'
+                    }}>
+                      {feature.icon}
+                    </div>
+                    <h3 style={{ fontSize: '22px', marginBottom: '15px', color: 'var(--primary)' }}>{feature.title}</h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '15px', lineHeight: '1.7' }}>{feature.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Banner Section */}
+          <section className="pahuna-ghar-info" style={{
             position: 'relative',
             padding: '120px 0',
-            background: `linear-gradient(to bottom, rgba(10, 15, 20, 0.8), rgba(10, 15, 20, 0.95)), url("${contentBg}")`,
+            background: `linear-gradient(to bottom, rgba(10, 15, 20, 0.85), rgba(10, 15, 20, 0.95)), url("${contentBg}")`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
@@ -436,8 +538,8 @@ function App() {
           }}>
             <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: '1000px', margin: '0 auto' }}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
@@ -451,21 +553,17 @@ function App() {
                 </div>
                 
                 <h2 className="pahuna-title" style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(32px, 6vw, 64px)', fontWeight: '700', marginBottom: '10px', letterSpacing: '2px', color: '#ffd700' }}>
-                  <span style={{ display: 'block' }}>STAR MOMO HOUSE</span>
-                  <span className="title-separator" style={{ color: 'rgba(255,255,255,0.5)', fontWeight: '300', margin: '0 10px' }}>|</span> 
-                  RESTAURANT
+                  STAR MOMO HOUSE
                 </h2>
                 
                 <h3 className="pahuna-subtitle" style={{ fontSize: '18px', letterSpacing: '4px', textTransform: 'uppercase', marginBottom: '60px', fontWeight: '500', color: '#e0e0e0' }}>
-                  AUTHENTIC HIMALAYAN CUISINE
+                  A Taste of the Himalayas in Dubai
                 </h3>
                 
-                <div style={{ fontSize: '16px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', maxWidth: '850px', margin: '0 auto' }}>
-                  <p style={{ marginBottom: '30px' }}>
-                    Welcome to Star Momo House, where you can taste the true essence of the Himalayas. Finding the most authentic Momo and signature platters in Dubai is made easy with us. At Star Momo House, we bring the traditional tastes of Nepal right to your table, where culinary passion meets unforgettable flavor.
-                  </p>
+                <div style={{ fontSize: '18px', lineHeight: '1.8', color: 'rgba(255,255,255,0.95)', maxWidth: '850px', margin: '0 auto', fontStyle: 'italic' }}>
+                  <Quote size={40} style={{ opacity: 0.2, marginBottom: '20px' }} />
                   <p>
-                    Every bite of our handcrafted dishes connects you to Nepal's rich traditions and vibrant culture. We prepare our food with the finest ingredients and authentic spices to ensure the perfect mix of flavor and texture, satisfying your taste buds and making you feel like you are truly in the Himalayas.
+                    "Welcome to Star Momo House, where you can taste the true essence of the Himalayas. We bring the traditional tastes of Nepal right to your table, where culinary passion meets unforgettable flavor."
                   </p>
                 </div>
               </motion.div>
@@ -632,12 +730,12 @@ function App() {
               </button>
               
               <div className="story-content">
-                <span style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>The Legend of Star Momo</span>
-                <h2 style={{ fontSize: '36px', margin: '15px 0 30px', color: 'var(--primary)' }}>A Journey from the Himalayas to Dubai</h2>
+                <span style={{ color: 'var(--accent)', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px' }}>The Journey of Star Momo</span>
+                <h2 style={{ fontSize: '36px', margin: '15px 0 30px', color: 'var(--primary)', fontFamily: 'var(--font-serif)' }}>Celebrating the Heart of Nepalese Cuisine</h2>
                 
                 <div style={{ color: 'var(--text-main)', opacity: 0.9, lineHeight: '1.8', fontSize: '17px' }}>
-                  <p style={{ marginBottom: '20px' }}>
-                    Every bowl of momo at Star Momo House carries the whispers of the mountain winds and the warmth of a Kathmandu hearth. Our story began decades ago in a small, hidden alley of Nepal, where our founder's grandmother would spend her mornings precisely hand-folding hundreds of dumplings for the community.
+                  <p style={{ marginBottom: '20px', fontWeight: '500' }}>
+                    Our journey began with a simple dream: to share the authentic, soulful flavors of the Himalayas with the world. Starting as a small family kitchen, we've brought our secret recipes and passion for excellence to the heart of Dubai.
                   </p>
                   
                   <blockquote style={{ 
@@ -646,22 +744,25 @@ function App() {
                     margin: '30px 0', 
                     fontStyle: 'italic',
                     color: 'var(--primary)',
-                    fontSize: '20px'
+                    fontSize: '20px',
+                    backgroundColor: 'rgba(255, 215, 0, 0.05)',
+                    padding: '20px 30px'
                   }}>
-                    "Food is not just ingredients; it's a memory of home, a gift of love, and a bridge between worlds."
+                    "Food is not just about sustenance; it's a bridge to our culture and a taste of home."
                   </blockquote>
 
                   <p style={{ marginBottom: '20px' }}>
-                    When we moved to Dubai, we realized something was missing: the true, unadulterated soul of Nepalese street food. We didn't want to just open a restaurant; we wanted to create a sanctuary where the Nepalese diaspora could find a taste of home, and the diverse community of Dubai could experience the authentic magic of Himalayan cuisine.
+                    Every momo we serve is a testament to our heritage—hand-folded with care and seasoned with spices sourced directly from Nepal. We believe that true flavor comes from tradition and the finest ingredients.
                   </p>
 
                   <p style={{ marginBottom: '20px' }}>
-                    What makes us different? It's the <b>'Secret 12-Spice Blend'</b> we source directly from small farmers in Nepal. It's the patience we have in preparing our broth for 8 long hours. And most importantly, it's the love our chefs put into every single pinch of dough.
+                    Today, Star Momo House stands as a beacon of Himalayan hospitality, where tradition meets modern culinary mastery to create an unforgettable dining experience for every guest.
                   </p>
 
-                  <p>
-                    Today, Star Momo House is more than just a place to eat—it's where stories are shared over steaming plates of Jhol Momo, where friendships are forged, and where the rich heritage of Nepal lives on in every bite.
-                  </p>
+                  <div style={{ marginTop: '40px', padding: '30px', backgroundColor: 'var(--bg-alt)', borderRadius: '15px' }}>
+                    <h4 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '18px' }}>Our Secret?</h4>
+                    <p style={{ fontSize: '15px' }}>It's the <b>'Secret 12-Spice Blend'</b> we source directly from small farmers in Nepal, and the patience we have in preparing our dishes with love.</p>
+                  </div>
                 </div>
 
                 <div style={{ marginTop: '40px', display: 'flex', gap: '20px', alignItems: 'center' }}>
