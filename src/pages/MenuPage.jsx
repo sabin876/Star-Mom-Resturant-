@@ -691,18 +691,26 @@ const MenuPage = () => {
         @media (max-width: 768px) {
           .menu-categories {
             top: 60px;
-            gap: 12px 10px;
-            padding: 15px 20px;
-            flex-wrap: wrap;
-            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
             border-radius: 0;
             background: rgba(250, 247, 242, 0.98) !important;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            margin-bottom: 24px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            margin-bottom: 16px;
             max-width: 100vw;
             border-bottom: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+          }
+
+          .menu-categories::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge */
           }
 
           .category-btn {
@@ -716,80 +724,86 @@ const MenuPage = () => {
             box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
             white-space: nowrap;
             gap: 6px;
+            flex-shrink: 0;
           }
 
           .category-btn.active {
             background: var(--primary) !important;
             color: white !important;
             border-color: transparent !important;
-            box-shadow: 0 4px 15px rgba(26, 93, 26, 0.25) !important;
+            box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2) !important;
             transform: none;
           }
 
-          .category-icon {
-            display: flex !important;
-          }
-
           .menu-page-grid-container {
-            padding: 24px 16px !important;
+            padding: 20px 12px !important;
             border-radius: 20px !important;
             background: white !important;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04) !important;
             margin-bottom: 20px;
+          }
+
+          .menu-page-grid-container h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            color: var(--primary) !important;
           }
 
           .menu-page-grid {
             grid-template-columns: 1fr !important;
-            gap: 14px !important;
+            gap: 12px !important;
           }
 
           .menu-item-card {
-            padding: 14px;
-            border-radius: 18px;
-            gap: 14px;
+            padding: 12px;
+            border-radius: 20px;
+            gap: 12px;
             background: #FAFAFA;
-            border: 1px solid rgba(0,0,0,0.05) !important;
-          }
-
-          .menu-item-card:hover {
-            transform: none;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.04) !important;
+            align-items: center;
           }
 
           .menu-item-img-container {
-            width: 80px;
-            height: 80px;
+            width: 72px;
+            height: 72px;
             border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
           }
 
-          .menu-page-grid-container h2 {
-            color: var(--primary) !important;
+          .menu-item-info {
+            gap: 4px;
+            min-width: 0; /* Critical for text wrapping in flex */
           }
 
           .menu-item-info h3 {
             font-size: 15px;
             line-height: 1.3;
-            color: var(--primary) !important;
+            font-weight: 700;
+            color: #1A2E1A !important;
+            margin: 0;
+            white-space: normal;
+            word-wrap: break-word;
           }
 
+          .menu-item-footer {
+            margin-top: 4px;
+            justify-content: space-between;
+            align-items: center;
+          }
 
           .menu-item-price {
             font-size: 13px;
             padding: 4px 10px;
-          }
-
-          .menu-item-footer {
-            margin-top: 6px;
+            font-weight: 700;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.05);
           }
 
           .order-now-btn {
-            font-size: 12px;
-            padding: 5px 10px;
+            font-size: 11px;
+            padding: 6px 10px;
             gap: 4px;
-          }
-
-          .order-now-btn span {
-            display: inline-block;
+            border-radius: 100px;
           }
         }
       `}</style>

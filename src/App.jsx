@@ -98,6 +98,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isStoryOpen, setIsStoryOpen] = useState(false);
   const [currentHero, setCurrentHero] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const { scrollYProgress } = useScroll();
   const scrollSpring = useSpring(scrollYProgress, { stiffness: 120, damping: 28, restDelta: 0.001 });
 
@@ -105,7 +106,14 @@ function App() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
 
     // Hero slideshow interval
     const interval = setInterval(() => {
@@ -114,6 +122,7 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
       clearInterval(interval);
     };
   }, []);
@@ -281,7 +290,7 @@ function App() {
                     </motion.span>
                     <motion.span
                       className="hero-title-line"
-                      initial={{ opacity: 0, letterSpacing: '0.35em' }}
+                      initial={{ opacity: 0, letterSpacing: '0.1em' }}
                       animate={{ opacity: 1, letterSpacing: '0.06em' }}
                       transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
                       style={{ display: 'block' }}
@@ -323,7 +332,7 @@ function App() {
                       </motion.a>
                     </motion.div>
                 </motion.div>
-
+ 
                 {/* Desktop Featured Image: hidden on mobile */}
                 <motion.div
                   className="hero-featured-image desktop-only"
