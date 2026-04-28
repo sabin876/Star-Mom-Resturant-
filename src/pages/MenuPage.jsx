@@ -14,7 +14,9 @@ import {
   Wheat,
   Beef,
   UtensilsCrossed,
-  Leaf
+  Leaf,
+  Egg,
+  Waves
 } from 'lucide-react';
 
 import imgRoti from '../assets/roti.png';
@@ -163,125 +165,11 @@ import imgCoffeeMilk from '../assets/Coffee Milk.jpg';
 import imgHotLemon from '../assets/Hot lemon.jpg';
 
 
-
-
-// ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
+// ESLint workaround
 void motion;
 void AnimatePresence;
 
-// Authentic realistic placeholder images mapped to each item
 const menuData = [
-  {
-    category: 'Breakfast',
-    items: [
-      { name: 'Roti / Chapati', price: '2 Dhs.', img: imgRoti },
-      { name: 'Roti Set (2 pcs. Roti And Tarkari)', price: '10 Dhs.', img: imgRotiSet },
-      { name: 'Puri Tarkari', price: '10 Dhs.', img: imgPuriTarkari },
-      { name: 'Egg Roll (Per Pcs)', price: '6 Dhs.', img: imgEggRoll },
-      { name: 'Plain Omlette (Small)', price: '3 Dhs.', img: imgPlainOmlette },
-      { name: 'Plain Omlette (Large)', price: '6 Dhs.', img: imgPlainOmlette },
-      { name: 'Masala Omlette (Small)', price: '4 Dhs.', img: imgMasalaOmlette },
-      { name: 'Masala Omlette (Large)', price: '7 Dhs.', img: imgMasalaOmlette },
-      { name: 'Paratha (Plain)', price: '2 Dhs.', img: imgParathaPlain },
-      { name: 'Paratha (Aloo)', price: '7 Dhs.', img: imgParathaAloo },
-      { name: 'Chicken Roll Paratha (Per Pcs)', price: '7 Dhs.', img: imgChickenRollParatha },
-      { name: 'Egg Bhurji (Small)', price: '4 Dhs.', img: imgAndaBhurjiNew },
-      { name: 'Egg Bhurji (Large)', price: '7 Dhs.', img: imgAndaBhurjiNew },
-      { name: 'Chana Anda', price: '12 Dhs.', img: imgChanaAnda },
-      { name: 'Egg Poach (Small)', price: '3 Dhs.', img: imgEggPoach },
-      { name: 'Egg Poach (Large)', price: '6 Dhs.', img: imgEggPoach },
-      { name: 'Selroti Set (2 pcs. Selroti And Tarkari)', price: '10 Dhs.', img: imgSelroti },
-    ],
-  },
-  {
-    category: 'Vegetables',
-    items: [
-      { name: 'Dal Plain Fry', price: '5/8 Dhs.', img: imgDalPlainFry },
-      { name: 'Aalu Dum (Gravy & Dry)', price: '12/12 Dhs.', img: imgAlooDumNew },
-      { name: 'Alu Gobi', price: '12 Dhs.', img: imgAluGobi },
-      { name: 'Alu Matar', price: '12 Dhs.', img: imgAluMatar },
-      { name: 'Matar Panner', price: '18 Dhs.', img: imgMatarPaneer },
-      { name: 'Panner Chili', price: '20 Dhs.', img: imgPaneerChilli },
-      { name: 'Bhendi fry', price: '12 Dhs.', img: imgBhendiFry },
-      { name: 'Gundruk Aalu', price: '12 Dhs.', img: imgGundrukAalu },
-      { name: 'Karela Fry', price: '12 Dhs.', img: imgKarelaFry },
-      { name: 'Mushroom Masala', price: '20 Dhs.', img: imgMushroomMasalaNew },
-    ],
-  },
-  {
-    category: 'Veg Snacks',
-    items: [
-      { name: 'Pani-Puri', price: '12 Dhs.', img: imgPanipuri },
-      { name: 'Aloo Chop (6pcs.)', price: '10 Dhs.', img: imgAlooChopNew },
-      { name: 'Aloo Saandeko', price: '10 Dhs.', img: imgAlooSaandekoNew },
-      { name: 'Aloo Dum', price: '12 Dhs.', img: imgAlooDumNew },
-      { name: 'Aloo Jeera', price: '10 Dhs.', img: imgAlooJeeraNew },
-      { name: 'Patato Chilli', price: '12 Dhs.', img: imgPotatoChilliSnackNew },
-      { name: 'Badam Saandeko', price: '12 Dhs.', img: imgBadamSaandekoNew },
-      { name: 'Bhatamas Saandeko', price: '12 Dhs.', img: imgBhatamasSaandekoNew },
-      { name: 'Chatpate', price: '12 Dhs.', img: imgChatpate },
-      { name: 'French Fries', price: '10 Dhs.', img: imgFrenchFriesNew },
-      { name: 'Mushroom Chilli', price: '18 Dhs.', img: imgMushroomChilliNew },
-      { name: 'Paneer Masala', price: '18 Dhs.', img: imgPaneerMasalaNew },
-      { name: 'Veg. Pakauda (6pcs.)', price: '10 Dhs.', img: imgVegPakaudaNew },
-      { name: 'Wai Wai Saandeko', price: '10 Dhs.', img: imgWaiWaiSaandekoNew },
-    ],
-  },
-  {
-    category: 'Non-veg Snacks',
-    items: [
-      { name: 'Buff Chhoila', price: '22 Dhs.', img: imgBuffChhoilaNew },
-      { name: 'Buff Chilli', price: '22 Dhs.', img: imgBuffChilliNew },
-      { name: 'Buff Sukuti Fried', price: '22 Dhs.', img: imgBuffSukutiFriedNew },
-      { name: 'Buff Sukuti Chilli', price: '22 Dhs.', img: imgBuffSukutiChilliNew },
-      { name: 'Buff Sukuti Saandeko', price: '22 Dhs.', img: imgBuffSukuti },
-      { name: 'Buff Sukuti Chatpate', price: '17 Dhs.', img: imgChatpate },
-      { name: 'Chicken Chhoila', price: '20 Dhs.', img: imgChickenChoila },
-      { name: 'Chicken Chilli (WB / Bonless)', price: '20/22 Dhs.', img: imgChickenManchurian },
-      { name: 'Chicken (Curry / Fry)', price: '17 Dhs.', img: imgThakaliChickenCurry },
-      { name: 'Chicken Saandeko', price: '20 Dhs.', img: imgChickenChoila },
-      { name: 'Chicken Lolipops', price: '20 Dhs.', img: imgChickenLolipopsNew },
-      { name: 'Chicken Wings Chilli', price: '15 Dhs.', img: imgChickenWingsChilliNew },
-      { name: 'Chicken Sausage Sticks (1pc.)', price: '2 Dhs.', img: imgChickenSausage1New },
-      { name: 'Chicken Sausage Sticks (6pcs.)', price: '10 Dhs.', img: imgChickenSausage6New },
-      { name: 'Chicken Chatpate', price: '17 Dhs.', img: imgChatpate },
-      { name: 'Mutton Pakku', price: '27 Dhs.', img: imgKhajaPakku },
-      { name: 'Mutton Curry', price: '22 Dhs.', img: imgMuttonCurryNewSnack },
-      { name: 'Mutton Bhutan', price: '20 Dhs.', img: imgThakaliBhuttanMutton },
-      { name: 'Egg Curry (3 Eggs)', price: '10 Dhs.', img: imgAndaBhurjiNew },
-    ],
-  },
-  {
-    category: 'Sadeko Item',
-    items: [
-      { name: 'Keema Noodles', price: '20/22 Dhs.', img: imgChickenChowmein },
-      { name: 'Aalu Nimiki', price: '15 Dhs.', img: imgAlooSaandekoNew },
-      { name: 'Chatpate Mo:mo', price: '15 Dhs.', img: imgChatpate },
-      { name: 'Sha-phaley Chicken/Buff', price: '17/19 Dhs.', img: imgChickenChoila },
-    ],
-  },
-  {
-    category: 'Taas Set',
-    items: [
-      { name: 'Chicken Taas Set', price: '24 Dhs.', img: imgChickenTaas },
-      { name: 'Mutton Taas Set', price: '27 Dhs.', img: imgMuttonTaas },
-      { name: 'Chewra Veg. Set', price: '14 Dhs.', img: imgChewraVegSet },
-      { name: 'Chewra Chicken Set', price: '16 Dhs.', img: imgChewraChickenSet },
-      { name: 'Chewra Buff Set', price: '18 Dhs.', img: imgChewraBuffSet },
-      { name: 'Chewra Mutton Curry Set', price: '18 Dhs.', img: imgMuttonThaliSetNew },
-      { name: 'Chewra Pakku Set', price: '22 Dhs.', img: imgChewraPakkuSet },
-      { name: 'Chewra Bhutan Set', price: '18 Dhs.', img: imgChewraBhutan },
-      { name: 'Khaja Set Mushroom / Paneer Chilli', price: '20 Dhs.', img: imgKhajaMushroomPaneerChilli },
-      { name: 'Khaja Set Chicken', price: '22 Dhs.', img: imgChickenChoila },
-      { name: 'Khaja Set Buff (Sukuti / Chhoila)', price: '25 Dhs.', img: imgBuffSukuti },
-      { name: 'Khaja Set Bhuttan', price: '23 Dhs.', img: imgThakaliBhuttanMutton },
-      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgKhajaPakku },
-      { name: 'Star Momo Special Khaja Set with Pakku', price: '29 Dhs.', img: imgSpecialKhajaPakku },
-      { name: 'Sekuwa Set Chicken', price: '22 Dhs.', img: imgSekuwaSetChicken },
-      { name: 'Sekuwa Set Mutton', price: '25 Dhs.', img: imgSekuwaSetMutton },
-    ],
-  },
-
   {
     category: 'Thakali Set',
     items: [
@@ -307,21 +195,64 @@ const menuData = [
     ],
   },
   {
-    category: 'Star Momo Special',
+    category: 'MO:MO',
     items: [
       { name: 'Steam Momo (10 Pcs) Veg/Chi./Buff', price: '16/17/18 Dhs.', img: imgSteamMomo },
       { name: 'Fry Momo Veg/Chi./Buff', price: '17/19/20 Dhs.', img: imgFryMomo },
       { name: 'Jhol Momo Veg/Chi/Buff', price: '18/20/22 Dhs.', img: imgJholMomo },
       { name: 'Chilli Momo (10 pcs.)', price: '18 Dhs.', img: imgChilliMomo },
       { name: 'Teel Jhol Momo Veg/Chi/Buff', price: '18/20/22 Dhs.', img: imgTeelJholMomo },
-      { name: 'Laphing (Tibetan) Dry/Jhol', price: '15/17 Dhs.', img: imgLaphingDry },
+      { name: 'Star Momo Platter Veg/Chicken/Buff', price: '24/26/27 Dhs.', img: imgStarMomoPlatterNew },
+      { name: 'Momo Chowmein Combo', price: '25 Dhs.', img: imgMomoChowmeinCombo },
+    ],
+  },
+  {
+    category: 'Chowmein/Thukpa',
+    items: [
+      { name: 'Veg. Chowmein', price: '15 Dhs.', img: imgVegChowmein },
+      { name: 'Chicken Chowmein', price: '17 Dhs.', img: imgChickenChowmein },
+      { name: 'Mixed Chowmein', price: '20 Dhs.', img: imgMixedChowmein },
       { name: 'Thukpa Veg/Chicken/Buff/Mix', price: '16/18/20/23 Dhs.', img: imgThukpa },
       { name: 'Thukpa Momo Veg/Chi/Buff', price: '21/22/25 Dhs.', img: imgThukpaMomo },
-      { name: 'Mushroom Soup', price: '12 Dhs.', img: imgMushroomSoup },
-      { name: 'Star Momo Platter Veg/Chicken/Buff', price: '24/26/27 Dhs.', img: imgStarMomoPlatterNew },
-      { name: 'Jumbo Combo Veg./Chicken/Buff (MO:MO+Chowmein+Chhoila +Bhutan + 2 Sausages+Egg)', price: '35 Dhs.', img: imgJumboCombo },
-      { name: 'Momo Chowmein Combo', price: '25 Dhs.', img: imgMomoChowmeinCombo },
-      { name: 'Special Combo Veg./Chicken/Buff (MO:MO+Chowmein+Chhoila)', price: '24/26/28 Dhs.', img: imgSpecialCombo },
+    ],
+  },
+  {
+    category: 'Newari Khaja/Tass',
+    items: [
+      { name: 'Chicken Taas Set', price: '24 Dhs.', img: imgChickenTaas },
+      { name: 'Mutton Taas Set', price: '27 Dhs.', img: imgMuttonTaas },
+      { name: 'Chewra Veg. Set', price: '14 Dhs.', img: imgChewraVegSet },
+      { name: 'Chewra Chicken Set', price: '16 Dhs.', img: imgChewraChickenSet },
+      { name: 'Chewra Buff Set', price: '18 Dhs.', img: imgChewraBuffSet },
+      { name: 'Khaja Set Pakku', price: '25 Dhs.', img: imgKhajaPakku },
+    ],
+  },
+  {
+    category: 'Egg',
+    items: [
+      { name: 'Egg Roll (Per Pcs)', price: '6 Dhs.', img: imgEggRoll },
+      { name: 'Plain Omlette (Large)', price: '6 Dhs.', img: imgPlainOmlette },
+      { name: 'Masala Omlette (Large)', price: '7 Dhs.', img: imgMasalaOmlette },
+      { name: 'Egg Bhurji (Large)', price: '7 Dhs.', img: imgAndaBhurjiNew },
+      { name: 'Egg Poach (Large)', price: '6 Dhs.', img: imgEggPoach },
+    ],
+  },
+  {
+    category: 'Sadeko Items',
+    items: [
+      { name: 'Aaloo Saandeko', price: '10 Dhs.', img: imgAlooSaandekoNew },
+      { name: 'Badam Saandeko', price: '12 Dhs.', img: imgBadamSaandekoNew },
+      { name: 'Bhatamas Saandeko', price: '12 Dhs.', img: imgBhatamasSaandekoNew },
+      { name: 'Wai Wai Saandeko', price: '10 Dhs.', img: imgWaiWaiSaandekoNew },
+    ],
+  },
+  {
+    category: 'Vegetables',
+    items: [
+      { name: 'Dal Plain Fry', price: '5/8 Dhs.', img: imgDalPlainFry },
+      { name: 'Alu Gobi', price: '12 Dhs.', img: imgAluGobi },
+      { name: 'Matar Panner', price: '18 Dhs.', img: imgMatarPaneer },
+      { name: 'Panner Chili', price: '20 Dhs.', img: imgPaneerChilli },
     ],
   },
   {
@@ -330,58 +261,57 @@ const menuData = [
       { name: 'Butter Chicken', price: '19 Dhs.', img: imgButterChicken },
       { name: 'Chicken Kadai', price: '19 Dhs.', img: imgChickenKadai },
       { name: 'Chicken Masala', price: '19 Dhs.', img: imgChickenMasala },
-      { name: 'Chicken Manchurian', price: '20 Dhs.', img: imgChickenManchurian },
-      { name: 'Chicken Roast', price: '20 Dhs.', img: imgChickenRoast },
       { name: 'Mutton Kadai', price: '24 Dhs.', img: imgMuttonKadai },
     ],
   },
   {
-    category: 'Biryani / Fried Rice / Noodles',
+    category: 'Breakfast',
+    items: [
+      { name: 'Roti Set', price: '10 Dhs.', img: imgRotiSet },
+      { name: 'Puri Tarkari', price: '10 Dhs.', img: imgPuriTarkari },
+      { name: 'Paratha (Aloo)', price: '7 Dhs.', img: imgParathaAloo },
+      { name: 'Selroti Set', price: '10 Dhs.', img: imgSelroti },
+    ],
+  },
+  {
+    category: 'Biryani / Fried Rice',
     items: [
       { name: 'Veg. Biryani', price: '15 Dhs.', img: imgVegBiryani },
       { name: 'Chicken Biryani', price: '15 Dhs.', img: imgChickenBiryani },
       { name: 'Mutton Biryani', price: '20 Dhs.', img: imgMuttonBiryani },
-      { name: 'Veg. Fried Rice', price: '15 Dhs.', img: imgVegFriedRice },
-      { name: 'Egg Fried Rice', price: '17 Dhs.', img: imgEggFriedRice },
       { name: 'Chicken Fried Rice', price: '17 Dhs.', img: imgChickenFriedRice },
-      { name: 'Veg. Chowmein', price: '15 Dhs.', img: imgVegChowmein },
-      { name: 'Chicken Chowmein', price: '17 Dhs.', img: imgChickenChowmein },
-      { name: 'Mixed Chowmein', price: '20 Dhs.', img: imgMixedChowmein },
-      { name: 'Triple Schezwan Fried Rice', price: '25 Dhs.', img: imgTripleSchezwanRice },
-      { name: 'Plain Rice', price: '5 Dhs.', img: imgPlainRice },
-      { name: 'Jeera Rice', price: '10 Dhs.', img: imgJeeraRice },
-      { name: 'Ghee Rice', price: '10 Dhs.', img: imgGheeRice },
+    ],
+  },
+  {
+    category: 'SOUP',
+    items: [
+      { name: 'Mushroom Soup', price: '12 Dhs.', img: imgMushroomSoup },
     ],
   },
   {
     category: 'Drinks',
     items: [
-      { name: 'Water (Small)', price: '1 Dhs.', img: imgWaterSmall },
-      { name: 'Water (Large)', price: '2 Dhs.', img: imgWaterBig },
       { name: 'Soft Drinks', price: '3 Dhs.', img: imgSoftDrinks },
-      { name: 'Tea (Black)', price: '1 Dhs.', img: imgBlackTea },
       { name: 'Tea (Milk)', price: '2 Dhs.', img: imgTeaMilk },
-      { name: 'Green Tea', price: '2 Dhs.', img: imgGreenTea },
       { name: 'Fresh Milk Tea', price: '3 Dhs.', img: imgFreshMilkTea },
-      { name: 'Coffee (Black)', price: '10 Dhs.', img: imgCoffeeBlack },
       { name: 'Coffee (Milk)', price: '10 Dhs.', img: imgCoffeeMilk },
-      { name: 'Hot Lemon w/ Honey', price: '10 Dhs.', img: imgHotLemon },
     ],
   },
 ];
 
 const categoryIcons = {
-  'Breakfast': <Coffee size={18} />,
-  'Vegetables': <Leaf size={18} />,
-  'Veg Snacks': <Sparkles size={18} />,
-  'Non-veg Snacks': <Beef size={18} />,
-  'Taas Set': <Flame size={18} />,
   'Thakali Set': <Utensils size={18} />,
   'Dhido Set': <Mountain size={18} />,
-  'Star Momo Special': <Star size={18} />,
-  'Sadeko Item': <Sparkles size={18} />,
+  'MO:MO': <Star size={18} />,
+  'Chowmein/Thukpa': <Utensils size={18} />,
+  'Newari Khaja/Tass': <Flame size={18} />,
+  'Egg': <Egg size={18} />,
+  'Sadeko Items': <Sparkles size={18} />,
+  'Vegetables': <Leaf size={18} />,
   'Indian Cuisine': <UtensilsCrossed size={18} />,
-  'Biryani / Fried Rice / Noodles': <Soup size={18} />,
+  'Breakfast': <Coffee size={18} />,
+  'Biryani / Fried Rice': <Soup size={18} />,
+  'SOUP': <Waves size={18} />,
   'Drinks': <GlassWater size={18} />,
 };
 
@@ -452,7 +382,7 @@ const MenuPage = () => {
         </motion.div>
 
         {/* Menu Grid */}
-        <div className="menu-page-grid-container" style={{ minHeight: '600px', backgroundColor: '#fff', borderRadius: '30px', padding: '60px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)' }}>
+        <div className="menu-page-grid-container" style={{ minHeight: '600px', backgroundColor: '#fff', borderRadius: '30px', padding: 'clamp(20px, 5vw, 60px)', boxShadow: '0 20px 40px rgba(0,0,0,0.03)' }}>
           <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '36px', marginBottom: '50px', textAlign: 'center', color: '#1A2E1A' }}>
             {activeData.category}
           </h2>
@@ -530,11 +460,6 @@ const MenuPage = () => {
           transition: all 0.4s ease;
         }
 
-        .menu-categories::after {
-          content: '';
-          flex: 0 0 15px; /* Add right padding after last item in scroll */
-        }
-        
         .category-btn {
           display: flex;
           align-items: center;
@@ -620,10 +545,6 @@ const MenuPage = () => {
           transition: transform 0.6s ease;
         }
 
-        .menu-item-card:hover .menu-item-img-container img {
-          transform: scale(1.1);
-        }
-
         .menu-item-info {
           flex: 1;
           display: flex;
@@ -681,58 +602,48 @@ const MenuPage = () => {
           transform: translateY(-1px);
         }
 
-        .menu-item-card:hover .menu-item-price {
-          background: var(--primary);
-          color: white;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
         @media (max-width: 768px) {
           .menu-categories {
-            top: 60px;
-            gap: 10px;
-            padding: 15px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            justify-content: flex-start;
-            border-radius: 0;
-            background: rgba(250, 247, 242, 0.98) !important;
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            margin-bottom: 16px;
-            max-width: 100vw;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
-          }
-
-          .menu-categories::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Edge */
+            top: 70px;
+            gap: 8px;
+            padding: 12px 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #ffffff !important;
+            margin-bottom: 24px;
+            max-width: 100%;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            position: relative;
+            border-radius: 0 0 24px 24px;
           }
 
           .category-btn {
-            padding: 8px 16px;
+            padding: 10px 14px;
             font-size: 13px;
             font-weight: 600;
-            border-radius: 100px !important;
-            background: white !important;
-            color: #4A5568 !important;
-            border: 1px solid rgba(0,0,0,0.08) !important;
+            border-radius: 14px !important;
+            background: #F7F7F7 !important;
+            color: #2D3748 !important;
+            border: 1px solid rgba(0,0,0,0.03) !important;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
             white-space: nowrap;
-            gap: 6px;
-            flex-shrink: 0;
+            gap: 8px;
+            flex: 0 1 auto;
+            min-width: calc(48% - 4px);
+            justify-content: flex-start;
           }
 
           .category-btn.active {
             background: var(--primary) !important;
             color: white !important;
             border-color: transparent !important;
-            box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2) !important;
-            transform: none;
+            box-shadow: 0 8px 16px rgba(26, 93, 26, 0.25) !important;
+            transform: scale(1.02);
+          }
+
+          .category-icon {
+            font-size: 16px;
           }
 
           .menu-page-grid-container {
@@ -772,7 +683,7 @@ const MenuPage = () => {
 
           .menu-item-info {
             gap: 4px;
-            min-width: 0; /* Critical for text wrapping in flex */
+            min-width: 0;
           }
 
           .menu-item-info h3 {
