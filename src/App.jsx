@@ -27,6 +27,7 @@ import ContactPage from './pages/ContactPage';
 import GoogleReviews from './components/GoogleReviews';
 import TeamSection from './components/TeamSection';
 import MenuPage from './pages/MenuPage';
+import SocialMediaPage from './pages/SocialMediaPage';
 
 
 
@@ -100,6 +101,7 @@ function App() {
   const isGallery = routePath === '/gallery';
   const isContact = routePath === '/contact';
   const isMenu = routePath === '/menu';
+  const isSocial = routePath === '/social-media' || routePath === '/socail-media';
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -225,7 +227,9 @@ function App() {
         </AnimatePresence>
       </motion.nav>
 
-      {isGallery ? (
+      {isSocial ? (
+        <SocialMediaPage />
+      ) : isGallery ? (
         <GalleryPage />
       ) : isContact ? (
         <ContactPage />
