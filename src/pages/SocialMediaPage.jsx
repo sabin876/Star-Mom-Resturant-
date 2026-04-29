@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Instagram, 
@@ -96,6 +96,14 @@ const itemVariants = {
 };
 
 function SocialMediaPage() {
+  useEffect(() => {
+    document.title = "Social Media | Star Momo House Restaurant";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Connect with Star Momo House on social media. Follow us on Instagram, Facebook, TikTok, and find our location on Google Maps.');
+    }
+  }, []);
+
   const assetModules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp,svg}', {
     eager: true,
     import: 'default',
